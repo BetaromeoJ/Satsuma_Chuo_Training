@@ -51,8 +51,8 @@
       }
     });
 
-    // 万一animationendが発火しない環境向けの保険（最大4.5秒で終了扱い）
-    window.setTimeout(finishIntro, prefersReducedMotion ? 1200 : 4500);
+    // 万一animationendが発火しない環境向けの保険（最大3秒で終了扱い）
+    window.setTimeout(finishIntro, prefersReducedMotion ? 1200 : 3000);
   }
 
   /* ----------------------------------------------------------
