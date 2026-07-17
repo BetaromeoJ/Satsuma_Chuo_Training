@@ -64,7 +64,7 @@ satsuma-chuo-ict-training/  （このリポジトリのルート）
 2. `index.html` 内の「セクション10：講師紹介」にある次の行を探します。
 
    ```html
-   <img src="images/profile/wada-michihiro.jpg" alt="講師 和田倫周の写真" ...>
+   <img src="images/profile/wada-michihiro.png" alt="講師 和田倫周の写真" ...>
    ```
 
 3. `src` の値を、保存したファイル名に書き換えてください（例：`images/profile/wada.png`）。
@@ -72,8 +72,8 @@ satsuma-chuo-ict-training/  （このリポジトリのルート）
 
 ## 書影の追加方法
 
-1. 書影画像を `images/books/` フォルダに保存します（例：`images/books/book-01.jpg`）。
-2. `index.html` の「セクション11：著作紹介」内、`<img src="images/books/book-01.jpg" ...>` の
+1. 書影画像を `images/books/` フォルダに保存します（例：`images/books/canva-book-01.png`）。
+2. `index.html` の「著作紹介」内、`<img src="images/books/canva-book-01.png" ...>` の
    `src` を差し替えてください。
 
 ## 著作カードの追加方法

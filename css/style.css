@@ -227,6 +227,8 @@ html.no-intro .fade-in-item {
   .book-type:hover,
   .credential-chip:hover,
   .timeline-item:hover,
+  .book-card:hover,
+  .book-buy-btn:hover,
   .btn:hover {
     transform: none !important;
   }
@@ -1155,7 +1157,10 @@ html.no-intro .fade-in-item {
   border-radius: var(--radius);
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
@@ -1165,8 +1170,13 @@ html.no-intro .fade-in-item {
   border-color: var(--color-accent-blue);
 }
 
+/* 書影は小さめの固定幅で表示する */
 .book-cover {
+  flex: 0 0 auto;
+  width: 120px;
   aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  overflow: hidden;
   background: var(--color-bg-alt);
   display: flex;
   align-items: center;
@@ -1182,7 +1192,9 @@ html.no-intro .fade-in-item {
 .book-cover.cover-missing::before {
   content: "書影 準備中";
   color: var(--color-text-soft);
-  font-size: 0.9rem;
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 0 8px;
 }
 
 .book-cover.cover-missing img {
@@ -1190,7 +1202,9 @@ html.no-intro .fade-in-item {
 }
 
 .book-info {
-  padding: 18px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -1225,6 +1239,29 @@ html.no-intro .fade-in-item {
 .book-desc {
   margin: 0.4em 0;
   font-size: 0.92rem;
+}
+
+/* 技術評論社サイトへの大きめボタン */
+.book-buy-btn {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 10px;
+  padding: 16px 24px;
+  border-radius: 999px;
+  background: var(--color-navy);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.book-buy-btn:hover {
+  background: var(--color-navy-soft);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(22, 35, 63, 0.3);
 }
 
 /* ------------------------------------------------------------
@@ -1374,6 +1411,20 @@ html.no-intro .fade-in-item {
   }
   .instructor-roles {
     text-align: left;
+  }
+
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-cover {
+    width: 96px;
+  }
+
+  .book-buy-btn {
+    max-width: none;
   }
 }
 
