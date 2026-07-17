@@ -577,19 +577,29 @@ html.no-intro .fade-in-item {
   margin: 0 auto 2.4em;
 }
 
+.flow-tag-item {
+  display: flex;
+  align-items: center;
+}
+
 .flow-tag {
-  display: inline-block;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  padding: 14px 8px;
   border-radius: 999px;
   background: var(--color-navy);
   color: #fff;
   font-weight: 700;
   font-size: 0.95rem;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.program-flow .flow-tag-item:not(:last-child) .flow-tag::after {
+.program-flow .flow-tag-item:not(:last-child)::after {
   content: "→";
-  margin-left: 10px;
+  margin: 0 10px;
   color: var(--color-navy);
   font-weight: 400;
 }
@@ -1183,25 +1193,23 @@ html.no-intro .fade-in-item {
   border-color: var(--color-accent-blue);
 }
 
-/* 書影はカードの高さいっぱいまで大きく表示する */
+/* 書影は変形サイズのため、縦横比は固定せず幅基準で大きく表示する */
 .book-cover {
   flex: 0 0 auto;
   width: 260px;
-  max-width: 40%;
-  align-self: stretch;
-  aspect-ratio: 3 / 4;
+  max-width: 42%;
   border-radius: 8px;
   overflow: hidden;
   background: var(--color-bg-alt);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .book-cover img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .book-cover.cover-missing::before {
@@ -1418,6 +1426,11 @@ html.no-intro .fade-in-item {
   .flow-step {
     min-width: 0;
     width: 100%;
+  }
+  .flow-tag {
+    width: 78px;
+    padding: 12px 6px;
+    font-size: 0.88rem;
   }
   .instructor-card {
     flex-direction: column;
