@@ -568,12 +568,13 @@ html.no-intro .fade-in-item {
    6. 研修プログラム（タイムライン・フロー）
    ------------------------------------------------------------ */
 .program-flow {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   gap: 10px;
-  margin-bottom: 2.4em;
+  margin: 0 auto 2.4em;
 }
 
 .flow-tag {
@@ -586,7 +587,7 @@ html.no-intro .fade-in-item {
   font-size: 0.95rem;
 }
 
-.program-flow li:not(:last-child) .flow-tag::after {
+.program-flow .flow-tag-item:not(:last-child) .flow-tag::after {
   content: "→";
   margin-left: 10px;
   color: var(--color-navy);
@@ -1125,10 +1126,10 @@ html.no-intro .fade-in-item {
 
 .credential-badge {
   flex: 0 0 auto;
-  height: 26px;
+  height: 1.15em;
   width: auto;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 4px;
   background: #fff;
 }
 
@@ -1182,10 +1183,12 @@ html.no-intro .fade-in-item {
   border-color: var(--color-accent-blue);
 }
 
-/* 書影は小さめの固定幅で表示する */
+/* 書影はカードの高さいっぱいまで大きく表示する */
 .book-cover {
   flex: 0 0 auto;
-  width: 120px;
+  width: 260px;
+  max-width: 40%;
+  align-self: stretch;
   aspect-ratio: 3 / 4;
   border-radius: 8px;
   overflow: hidden;
@@ -1432,7 +1435,9 @@ html.no-intro .fade-in-item {
   }
 
   .book-cover {
-    width: 96px;
+    width: 70%;
+    max-width: 220px;
+    align-self: center;
   }
 
   .book-buy-btn {
