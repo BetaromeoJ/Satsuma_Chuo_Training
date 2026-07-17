@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>先生の仕事がもっと楽になる｜生成AI × Google Workspace 実践講座｜鹿児島県立薩摩中央高等学校 教職員ICT研修</title>
+<meta name="description" content="鹿児島県立薩摩中央高等学校 教職員ICT研修（90分）。生成AIとGoogle Workspaceを使った会議・面談・授業準備の効率化を、研修当日の進行と研修後の復習の両方に対応したサイトで学べます。講師：和田倫周">
+
+<!--
+  ============================================================
+  編集ガイド（サイト管理者向け）
+  ------------------------------------------------------------
+  ・本文や見出しは、該当箇所に「編集ここから」「編集ここまで」の
+    コメントを付けています。検索して探してください。
+  ・画像・リンクの差し替え方法は README.md に記載しています。
+  ・未設定のリンクは class="link-pending" と data-status="pending"
+    を付与し、「準備中」と表示されるようにしています。
+    リンクが決まったら、href属性にURLを入れ、
+    class="link-pending" と data-status="pending" を削除してください。
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- JS非対応・読み込み前でも黒幕が残らないようにするための早期スクリプト -->
+<script>
+  (function () {
+    try {
+      if (sessionStorage.getItem('ictIntroShown') === '1') {
+        document.documentElement.classList.add('no-intro');
+      }
+    } catch (e) {
+      /* sessionStorageが使えない環境でも問題なく進行する */
+    }
+  })();
+</script>
+</head>
+<body>
+
+<!-- ============================================================
+     オープニング演出：黒幕
+     JavaScriptが無効・未読込でも、CSSアニメーションのみで
+     自動的に上へ抜けるため、画面が覆われたままになりません。
+     ============================================================ -->
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain-inner">
+    <p class="curtain-label">鹿児島県立薩摩中央高等学校 教職員ICT研修</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     ヘッダー・グローバルナビゲーション（追従型）
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#home">
+      <span class="brand-title">先生の仕事がもっと楽になる</span>
+      <span class="brand-sub">生成AI × Google Workspace 実践講座</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開閉する">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav class="global-nav" id="global-nav" aria-label="サイト内ナビゲーション">
+      <ul>
+        <li><a href="#home" data-nav>ホーム</a></li>
+        <li><a href="#overview" data-nav>研修内容</a></li>
+        <li><a href="#voice-ai" data-nav>音声AI</a></li>
+        <li><a href="#gemini" data-nav>Gemini</a></li>
+        <li><a href="#forms" data-nav>Googleフォーム</a></li>
+        <li><a href="#canva" data-nav>Canva</a></li>
+        <li><a href="#prompt-assets" data-nav>プロンプト集</a></li>
+        <li><a href="#review" data-nav>復習教材</a></li>
+        <li><a href="#instructor" data-nav>講師紹介</a></li>
+        <li><a href="#publications" data-nav>著作紹介</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============================================================
+       セクション1：ファーストビュー
+       ============================================================ -->
+  <section class="hero" id="home" aria-label="ファーストビュー">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-shape shape-a"></div>
+      <div class="hero-bg-shape shape-b"></div>
+      <div class="hero-bg-shape shape-c"></div>
+      <svg class="hero-bg-icons" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <!-- 抽象的な音声波形・チャットバブル・書類アイコン（特定企業ロゴは使用しない） -->
+        <g stroke="currentColor" stroke-width="2" fill="none" opacity="0.35">
+          <path d="M60 300 q20 -60 40 0 t40 0 t40 0 t40 0 t40 0 t40 0" />
+          <rect x="560" y="120" width="120" height="90" rx="14" />
+          <path d="M560 210 l20 24 l20 -24" />
+          <rect x="120" y="420" width="90" height="120" rx="10" />
+          <line x1="138" y1="450" x2="192" y2="450" />
+          <line x1="138" y1="472" x2="192" y2="472" />
+          <line x1="138" y1="494" x2="170" y2="494" />
+          <circle cx="680" cy="420" r="46" />
+          <path d="M660 420 l14 14 l26 -30" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-in-item">鹿児島県立薩摩中央高等学校 教職員ICT研修</p>
+      <h1 class="hero-title fade-in-item">
+        先生の仕事がもっと楽になる
+      </h1>
+      <p class="hero-subtitle fade-in-item">生成AI × Google Workspace 実践講座</p>
+      <p class="hero-catch fade-in-item">会議・面談・授業準備を90分で変える</p>
+      <p class="hero-instructor fade-in-item">講師：和田 倫周（みちひろ）</p>
+
+      <div class="hero-actions fade-in-item">
+        <a class="btn btn-primary" href="#overview">研修内容を見る</a>
+        <a class="btn btn-secondary" href="#prompt-assets">プロンプト集を開く</a>
+        <a class="btn btn-secondary" href="#review">復習教材を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション2：今日のゴール
+       ============================================================ -->
+  <section class="section" id="goals" aria-labelledby="goals-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="goals-heading">今日の90分でできるようになること</h2>
+
+      <ul class="goal-grid">
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>会議や面談の録音データから記録を作成できる</p>
+        </li>
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>同じ音声データを複数の文書形式に変換できる</p>
+        </li>
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>Geminiを授業準備や校務に活用できる</p>
+        </li>
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>Googleフォームを実際に作成できる</p>
+        </li>
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>PowerPointをCanvaへ取り込める</p>
+        </li>
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>Canva AIでスピーカーノートを作成できる</p>
+        </li>
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>スマートフォンをプレゼンリモコンとして使える</p>
+        </li>
+        <li class="goal-card fade-in">
+          <span class="goal-icon" aria-hidden="true">✓</span>
+          <p>研修サイトを使って一人で復習できる</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション3：90分の研修全体像
+       ============================================================ -->
+  <section class="section section-alt" id="overview" aria-labelledby="overview-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="overview-heading">本日の研修プログラム</h2>
+
+      <ol class="program-flow" aria-label="入力から継続までの流れ">
+        <li><span class="flow-tag">入力</span></li>
+        <li><span class="flow-tag">生成</span></li>
+        <li><span class="flow-tag">収集</span></li>
+        <li><span class="flow-tag">発信</span></li>
+        <li><span class="flow-tag">継続</span></li>
+      </ol>
+
+      <ol class="timeline">
+        <li class="timeline-item fade-in">
+          <span class="timeline-time">20分</span>
+          <div class="timeline-body">
+            <h3>1. 音声AIによる業務改善</h3>
+            <p>Surface Go 2の録音とGeminiを組み合わせ、会議録や面談記録などを作成します。</p>
+          </div>
+        </li>
+        <li class="timeline-item fade-in">
+          <span class="timeline-time">25分</span>
+          <div class="timeline-body">
+            <h3>2. Geminiで授業・校務改善</h3>
+            <p>授業案・ワークシート・保護者向け文書などをGeminiと一緒に作ります。</p>
+          </div>
+        </li>
+        <li class="timeline-item fade-in">
+          <span class="timeline-time">25分</span>
+          <div class="timeline-body">
+            <h3>3. Googleフォーム実践</h3>
+            <p>授業の振り返りフォームを実際に作成し、集計までを体験します。</p>
+          </div>
+        </li>
+        <li class="timeline-item fade-in">
+          <span class="timeline-time">15分</span>
+          <div class="timeline-body">
+            <h3>4. Canva教育版活用</h3>
+            <p>PowerPointの取り込み、スピーカーノート生成、スマホリモコンを紹介します。</p>
+          </div>
+        </li>
+        <li class="timeline-item fade-in">
+          <span class="timeline-time">5分</span>
+          <div class="timeline-body">
+            <h3>5. プロンプトと復習サイトの活用</h3>
+            <p>本サイトを使った研修後の復習方法を案内します。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション4：音声AIによる業務改善
+       ============================================================ -->
+  <section class="section" id="voice-ai" aria-labelledby="voice-ai-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="voice-ai-heading">「話すだけ」で校務が進む時代へ</h2>
+      <p class="section-subcopy">Surface Go 2のサウンドレコーダーとGeminiを使った業務改善</p>
+
+      <div class="flow-diagram fade-in" role="list" aria-label="音声AI活用の基本フロー">
+        <div class="flow-step" role="listitem">Surface Go 2</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">サウンドレコーダー</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">音声録音</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">Geminiへアップロード</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">文字起こし</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">目的に応じた文書生成</div>
+      </div>
+
+      <p class="key-message fade-in">
+        AIは文章を書くためだけのものではありません。<br>
+        AIは、同じ情報を目的に応じて変換するパートナーです。
+      </p>
+
+      <h3 class="sub-heading">活用例</h3>
+      <ul class="chip-list fade-in">
+        <li>会議録</li>
+        <li>面談記録</li>
+        <li>保護者向け報告文</li>
+        <li>生徒指導記録</li>
+        <li>次回面談までの支援課題</li>
+        <li>決定事項一覧</li>
+        <li>ToDoリスト</li>
+        <li>授業記録</li>
+        <li>授業改善案</li>
+        <li>校内研修の要約</li>
+      </ul>
+
+      <!-- 音声AI演習 -->
+      <h3 class="sub-heading">音声AI演習</h3>
+      <ol class="step-list fade-in">
+        <li class="step-item">
+          <span class="step-num">STEP 1</span>
+          <p>Surface Go 2でサウンドレコーダーを開く</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 2</span>
+          <p>2〜3分程度の会話や説明を録音する</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 3</span>
+          <p>音声ファイルを保存する</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 4</span>
+          <p>Geminiへ音声ファイルをアップロードする</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 5</span>
+          <p>プロンプトを入力する</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 6</span>
+          <p>出力結果を比較する</p>
+        </li>
+      </ol>
+
+      <div class="notice-box fade-in" role="note">
+        <h3>注意事項</h3>
+        <ul>
+          <li>実際の生徒名や個人情報を含む音声は、研修用演習では使用しない</li>
+          <li>録音する場合は、参加者の同意を得る</li>
+          <li>学校の情報セキュリティ方針に従う</li>
+          <li>個人情報や要配慮情報の入力可否を確認する</li>
+          <li>AIの出力内容は、必ず人が確認する</li>
+          <li>面談記録や生徒指導記録をAIだけで確定しない</li>
+        </ul>
+      </div>
+
+      <!-- 音声AI用プロンプト集 -->
+      <h3 class="sub-heading">音声AI用プロンプト集</h3>
+      <div class="prompt-grid">
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>プロンプト1：会議録</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-voice-1">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-voice-1">この音声データを文字起こしした上で、校内会議の記録として整理してください。
+次の項目に分けてまとめてください。
+1. 会議の目的
+2. 主な協議内容
+3. 決定事項
+4. 継続検討事項
+5. 担当者
+6. 期限
+7. 次回までに行うこと
+聞き取りが不明確な部分は推測せず、「聞き取り不明」と表示してください。</pre>
+        </article>
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>プロンプト2：面談記録</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-voice-2">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-voice-2">この音声データをもとに、学校で保存する面談記録の下書きを作成してください。
+次の項目に分けてください。
+1. 面談の概要
+2. 生徒本人の発言
+3. 教員から確認した内容
+4. 現在の課題
+5. 本人の希望
+6. 今後の支援方針
+7. 次回までの確認事項
+事実と推測を明確に分け、音声にない情報は追加しないでください。</pre>
+        </article>
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>プロンプト3：保護者向け報告文</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-voice-3">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-voice-3">この面談内容を、保護者に共有するための丁寧で分かりやすい文章にしてください。
+- 専門用語を避ける
+- 不安を過度にあおらない
+- 生徒のよい点も含める
+- 今後の対応を具体的に示す
+- 300字程度にまとめる</pre>
+        </article>
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>プロンプト4：ToDoリスト</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-voice-4">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-voice-4">この会話の中から、今後行う必要があることだけを抽出してください。
+次の表形式で整理してください。
+- 実施事項
+- 担当者
+- 期限
+- 優先度
+- 確認方法
+担当者や期限が音声内で決まっていない場合は、「未定」としてください。</pre>
+        </article>
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>プロンプト5：授業記録と改善</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-voice-5">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-voice-5">この授業後の振り返り音声をもとに、授業記録を作成してください。
+次の項目に分けて整理してください。
+1. 本時の目標
+2. 実施した活動
+3. 生徒の反応
+4. うまくいった点
+5. 課題
+6. 次回改善したいこと
+7. AIからの改善提案
+事実として話されていることと、AIからの提案を分けて表示してください。</pre>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション5：Geminiで授業・校務改善
+       ============================================================ -->
+  <section class="section section-alt" id="gemini" aria-labelledby="gemini-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="gemini-heading">Geminiは先生の「共同担当」</h2>
+
+      <div class="category-columns">
+        <div class="category-block fade-in">
+          <h3>授業づくり</h3>
+          <ul class="chip-list">
+            <li>授業案</li>
+            <li>導入アイデア</li>
+            <li>発問</li>
+            <li>ワークシート</li>
+            <li>小テスト</li>
+            <li>ルーブリック</li>
+            <li>振り返り活動</li>
+          </ul>
+        </div>
+        <div class="category-block fade-in">
+          <h3>校務改善</h3>
+          <ul class="chip-list">
+            <li>通知文</li>
+            <li>保護者向け文書</li>
+            <li>会議資料</li>
+            <li>学級通信</li>
+            <li>研修資料</li>
+            <li>アンケート案</li>
+            <li>メール文面</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="key-message fade-in">良いプロンプトを書くことだけでなく、良い資料を渡すことが重要です。</p>
+
+      <div class="five-elements fade-in" role="list" aria-label="精度を上げる5つの入力項目">
+        <div class="element-card" role="listitem"><span>条件</span></div>
+        <div class="element-card" role="listitem"><span>対象</span></div>
+        <div class="element-card" role="listitem"><span>目的</span></div>
+        <div class="element-card" role="listitem"><span>出力形式</span></div>
+        <div class="element-card" role="listitem"><span>参考資料</span></div>
+      </div>
+
+      <!-- Gemini用プロンプト例 -->
+      <h3 class="sub-heading">Gemini用プロンプト例</h3>
+      <div class="prompt-grid">
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>授業案作成</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-gemini-1">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-gemini-1">あなたは高校の教員を支援する授業設計アドバイザーです。
+次の条件で50分の授業案を作成してください。
+教科：
+学年：
+単元：
+本時の目標：
+生徒の実態：
+使用できるICT：
+授業で重視したいこと：
+次の形式で出力してください。
+1. 本時の目標
+2. 導入
+3. 展開
+4. まとめ
+5. 生徒への発問
+6. 使用教材
+7. 評価方法
+8. ICT活用のポイント</pre>
+        </article>
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>ワークシート作成</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-gemini-2">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-gemini-2">次の授業内容をもとに、高校生向けのワークシートを作成してください。
+条件：
+- A4用紙1枚程度
+- 生徒が考えて記入する欄を設ける
+- 難易度を段階的にする
+- 最後に振り返り欄を設ける
+- 教員用の解答例も別に作成する
+授業内容：
+対象学年：
+教科：
+単元：</pre>
+        </article>
+
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>保護者向け文書</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-gemini-3">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-gemini-3">次の内容を、保護者に配付する学校文書として整えてください。
+条件：
+- 丁寧で分かりやすい
+- 必要事項が一目で分かる
+- 曖昧な表現を避ける
+- 日時、場所、持参物、提出期限を明確にする
+- A4用紙1枚以内
+元の内容：</pre>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション6：Googleフォーム実践
+       ============================================================ -->
+  <section class="section" id="forms" aria-labelledby="forms-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="forms-heading">Googleフォームは「集める」だけではありません</h2>
+      <p class="key-message fade-in">Googleフォームは、情報収集・集計・共有を自動化する道具です。</p>
+
+      <div class="flow-diagram fade-in" role="list" aria-label="Googleフォーム活用の基本フロー">
+        <div class="flow-step" role="listitem">Geminiで質問案作成</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">Googleフォーム作成</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">回答</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">自動集計</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">グラフ化</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">スプレッドシート連携</div>
+      </div>
+
+      <h3 class="sub-heading">活用例</h3>
+      <ul class="chip-list fade-in">
+        <li>授業アンケート</li>
+        <li>小テスト</li>
+        <li>生徒の振り返り</li>
+        <li>行事参加確認</li>
+        <li>面談希望調査</li>
+        <li>進路希望調査</li>
+        <li>校内研修アンケート</li>
+        <li>教材評価</li>
+      </ul>
+
+      <h3 class="sub-heading">研修中の演習：授業の振り返りフォームを作る</h3>
+      <ul class="chip-list fade-in">
+        <li>1. 氏名または番号</li>
+        <li>2. 今日の授業で理解できたこと</li>
+        <li>3. まだ分からないこと</li>
+        <li>4. 授業への参加度</li>
+        <li>5. 次回取り組みたいこと</li>
+        <li>6. 教員への質問</li>
+      </ul>
+
+      <h3 class="sub-heading">フォーム作成の手順</h3>
+      <div class="accordion" data-accordion>
+        <div class="accordion-item">
+          <h4>
+            <button type="button" class="accordion-trigger" aria-expanded="false">STEP 1　Googleフォームを新規作成する</button>
+          </h4>
+          <div class="accordion-panel">
+            <p>Google Workspaceのアプリ一覧からフォームを開き、新しいフォームを作成します。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4>
+            <button type="button" class="accordion-trigger" aria-expanded="false">STEP 2　タイトルと説明を入力する</button>
+          </h4>
+          <div class="accordion-panel">
+            <p>「授業の振り返りフォーム」など、目的が分かるタイトルを付けます。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4>
+            <button type="button" class="accordion-trigger" aria-expanded="false">STEP 3　質問項目を追加する</button>
+          </h4>
+          <div class="accordion-panel">
+            <p>氏名、理解できたこと、分からないこと、参加度、次回の目標、質問などを追加します。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4>
+            <button type="button" class="accordion-trigger" aria-expanded="false">STEP 4　回答形式を設定する</button>
+          </h4>
+          <div class="accordion-panel">
+            <p>記述式、選択式、段階評価などを質問内容に合わせて選びます。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4>
+            <button type="button" class="accordion-trigger" aria-expanded="false">STEP 5　プレビューで確認する</button>
+          </h4>
+          <div class="accordion-panel">
+            <p>生徒側の画面を実際に確認し、質問文が分かりやすいか見直します。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4>
+            <button type="button" class="accordion-trigger" aria-expanded="false">STEP 6　共有・配布する</button>
+          </h4>
+          <div class="accordion-panel">
+            <p>リンクやQRコードで生徒に配布します。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h4>
+            <button type="button" class="accordion-trigger" aria-expanded="false">STEP 7　回答を集計・グラフ化する</button>
+          </h4>
+          <div class="accordion-panel">
+            <p>「回答」タブで集計結果を確認し、必要に応じてスプレッドシートに連携します。</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="link-note fade-in">研修で作成したフォームのサンプルは「復習教材」セクションから確認できます。</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション7：Canva教育版
+       ============================================================ -->
+  <section class="section section-alt" id="canva" aria-labelledby="canva-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="canva-heading">Canvaの基本操作を学ぶ研修ではありません</h2>
+      <p class="section-subcopy">今あるPowerPointを、より便利に活用する研修です</p>
+
+      <ul class="chip-list fade-in">
+        <li>1. PowerPointをCanvaへ取り込む</li>
+        <li>2. Canva AIでスピーカーノートを作成する</li>
+        <li>3. スマートフォンをプレゼンリモコンとして使う</li>
+      </ul>
+
+      <!-- PowerPointからCanvaへの変換 -->
+      <h3 class="sub-heading">PowerPointからCanvaへの変換</h3>
+      <div class="flow-diagram fade-in" role="list" aria-label="PowerPointからCanvaへの変換フロー">
+        <div class="flow-step" role="listitem">PowerPointファイルを準備</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">Canvaのホーム画面を開く</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">ファイルをドラッグ＆ドロップ</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">自動変換</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">レイアウトを確認</div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step" role="listitem">必要な箇所を修正</div>
+      </div>
+
+      <div class="notice-box fade-in" role="note">
+        <h3>注意事項</h3>
+        <ul>
+          <li>フォントが変わることがある</li>
+          <li>図形の位置がずれることがある</li>
+          <li>アニメーションは再設定が必要な場合がある</li>
+          <li>変換後は全スライドを確認する</li>
+          <li>元のPowerPointデータは残しておく</li>
+        </ul>
+      </div>
+
+      <!-- Canva AIでスピーカーノート -->
+      <h3 class="sub-heading">Canva AIでスピーカーノート</h3>
+      <ul class="chip-list fade-in">
+        <li>スライドごとの説明文</li>
+        <li>授業中の話し方</li>
+        <li>補足説明</li>
+        <li>発問例</li>
+        <li>時間配分</li>
+        <li>初心者向け説明</li>
+        <li>生徒の理解を確認する質問</li>
+      </ul>
+
+      <div class="prompt-grid">
+        <article class="prompt-card fade-in">
+          <div class="prompt-card-head">
+            <h4>スピーカーノート生成</h4>
+            <button type="button" class="copy-btn" data-copy-target="prompt-canva-1">コピー</button>
+          </div>
+          <pre class="prompt-text" id="prompt-canva-1">このプレゼンテーションの各スライドについて、高校生に説明するためのスピーカーノートを作成してください。
+条件：
+- 1枚につき100〜150字程度
+- スライドに書かれていない補足説明を入れる
+- 専門用語には簡単な説明を加える
+- 必要に応じて生徒への問いかけを入れる
+- 教員が自然に話せる文章にする</pre>
+        </article>
+      </div>
+
+      <!-- スマートフォンをプレゼンリモコンにする -->
+      <h3 class="sub-heading">スマートフォンをプレゼンリモコンにする</h3>
+      <ul class="chip-list fade-in">
+        <li>次のスライドへ進む</li>
+        <li>前のスライドへ戻る</li>
+        <li>スピーカーノートを見る</li>
+        <li>タイマーを確認する</li>
+        <li>発表を手元から操作する</li>
+      </ul>
+
+      <div class="screenshot-placeholder fade-in">
+        <!-- 操作画面の画像は images/screenshots/remote-control.png に差し替えてください -->
+        <img src="images/screenshots/remote-control.png" alt="スマートフォンをプレゼンリモコンとして使う操作画面（差し替え用プレースホルダー）" loading="lazy" onerror="this.closest('.screenshot-placeholder').classList.add('img-missing')">
+        <p class="placeholder-label">操作画面イメージ（準備中）</p>
+      </div>
+
+      <ol class="step-list fade-in">
+        <li class="step-item">
+          <span class="step-num">STEP 1</span>
+          <p>スマートフォンでCanvaアプリを開き、対象のプレゼンテーションを表示する</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 2</span>
+          <p>「プレゼンターツール」または同等のリモコン機能を選択する</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 3</span>
+          <p>PC側の発表画面と接続されていることを確認する</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 4</span>
+          <p>スマートフォンの画面をスワイプしてスライドを操作する</p>
+        </li>
+        <li class="step-item">
+          <span class="step-num">STEP 5</span>
+          <p>スピーカーノートとタイマーを手元で確認しながら発表する</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション8：プロンプトは資産
+       ============================================================ -->
+  <section class="section" id="prompt-assets" aria-labelledby="prompt-assets-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="prompt-assets-heading">プロンプトは、学校の資産になる</h2>
+      <p class="key-message fade-in">
+        一度作ったプロンプトは、その場限りの文章ではありません。<br>
+        会議録、面談記録、授業案、保護者文書など、学校で繰り返し使用するプロンプトを共有することで、校務の標準化と業務改善につながります。
+      </p>
+
+      <!-- 編集ここから：カテゴリーごとの代表プロンプト。追加する場合はarticle.prompt-cardを複製してください -->
+      <div class="prompt-category-grid">
+
+        <div class="prompt-category fade-in">
+          <h3>会議・打合せ</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>会議録テンプレート</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-meeting">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-meeting">この音声データを文字起こしした上で、校内会議の記録として整理してください。
+1. 会議の目的　2. 主な協議内容　3. 決定事項　4. 継続検討事項　5. 担当者　6. 期限　7. 次回までに行うこと
+聞き取りが不明確な部分は「聞き取り不明」と表示してください。</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>面談・教育相談</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>面談記録テンプレート</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-interview">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-interview">この音声データをもとに、学校で保存する面談記録の下書きを作成してください。
+1. 面談の概要　2. 生徒本人の発言　3. 教員から確認した内容　4. 現在の課題　5. 本人の希望　6. 今後の支援方針　7. 次回までの確認事項
+事実と推測を明確に分け、音声にない情報は追加しないでください。</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>生徒指導</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>指導記録の整理</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-guidance">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-guidance">この音声データをもとに、生徒指導記録の下書きを作成してください。
+事実、生徒の発言、教員の対応、今後の方針を分けて整理してください。
+推測や断定的な評価は加えず、確認が必要な部分は「要確認」としてください。</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>授業づくり</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>授業案テンプレート</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-lesson">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-lesson">あなたは高校の教員を支援する授業設計アドバイザーです。
+教科／学年／単元／本時の目標／生徒の実態／使用できるICT／授業で重視したいこと　を条件として、
+1.本時の目標 2.導入 3.展開 4.まとめ 5.生徒への発問 6.使用教材 7.評価方法 8.ICT活用のポイント
+の形式で50分の授業案を作成してください。</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>教材作成</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>ワークシートテンプレート</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-worksheet">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-worksheet">次の授業内容をもとに、高校生向けのワークシートを作成してください。
+A4用紙1枚程度、記入欄あり、難易度を段階的にし、振り返り欄と教員用解答例も作成してください。
+授業内容／対象学年／教科／単元：</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>評価・振り返り</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>授業記録と改善提案</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-review">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-review">この授業後の振り返り音声をもとに、授業記録を作成してください。
+1.本時の目標 2.実施した活動 3.生徒の反応 4.うまくいった点 5.課題 6.次回改善したいこと 7.AIからの改善提案
+事実として話されていることと、AIからの提案を分けて表示してください。</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>保護者対応</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>保護者向け報告文</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-parent">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-parent">この面談内容を、保護者に共有するための丁寧で分かりやすい文章にしてください。
+専門用語を避け、不安を過度にあおらず、生徒のよい点も含め、今後の対応を具体的に示し、300字程度でまとめてください。</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>校内文書</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>学校文書テンプレート</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-doc">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-doc">次の内容を、保護者に配付する学校文書として整えてください。
+丁寧で分かりやすく、必要事項が一目で分かり、曖昧な表現を避け、日時・場所・持参物・提出期限を明確にしてください。A4用紙1枚以内。
+元の内容：</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>Googleフォーム</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>アンケート質問案</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-forms">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-forms">次のテーマについて、Googleフォームで使用するアンケート項目を作成してください。
+選択式と記述式を組み合わせ、生徒が答えやすい表現にしてください。
+テーマ：</pre>
+          </div>
+        </div>
+
+        <div class="prompt-category fade-in">
+          <h3>Canva</h3>
+          <div class="prompt-card">
+            <div class="prompt-card-head">
+              <h4>スピーカーノート作成</h4>
+              <button type="button" class="copy-btn" data-copy-target="prompt-cat-canva">コピー</button>
+            </div>
+            <pre class="prompt-text" id="prompt-cat-canva">このプレゼンテーションの各スライドについて、高校生に説明するためのスピーカーノートを作成してください。
+1枚につき100〜150字程度、補足説明と生徒への問いかけを含め、教員が自然に話せる文章にしてください。</pre>
+          </div>
+        </div>
+
+      </div>
+      <!-- 編集ここまで -->
+
+      <p class="copy-toast" id="copy-toast" role="status" aria-live="polite" hidden>コピーしました</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション9：復習教材
+       ============================================================ -->
+  <section class="section section-alt" id="review" aria-labelledby="review-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="review-heading">研修が終わってからが、本当のスタートです</h2>
+
+      <!-- 編集ここから：リンクは href を書き換え、class="link-pending" と data-status="pending" を削除してください -->
+      <ul class="material-grid">
+        <li class="material-card fade-in">
+          <h3>本日のスライド</h3>
+          <a class="material-link link-pending" data-status="pending" href="assets/slides/">資料を見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>音声AI操作マニュアル</h3>
+          <a class="material-link link-pending" data-status="pending" href="assets/documents/">資料を見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>Surface Go 2録音手順</h3>
+          <a class="material-link link-pending" data-status="pending" href="assets/documents/">資料を見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>Geminiプロンプト集</h3>
+          <a class="material-link" href="#prompt-assets">サイト内で見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>Googleフォーム作成手順</h3>
+          <a class="material-link" href="#forms">サイト内で見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>Googleフォームサンプル</h3>
+          <a class="material-link link-pending" data-status="pending" href="#">サンプルを見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>Canva操作手順</h3>
+          <a class="material-link" href="#canva">サイト内で見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>PowerPoint変換方法</h3>
+          <a class="material-link" href="#canva">サイト内で見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>スピーカーノート生成方法</h3>
+          <a class="material-link" href="#canva">サイト内で見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>スマホリモコン設定方法</h3>
+          <a class="material-link" href="#canva">サイト内で見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>おすすめYouTube</h3>
+          <a class="material-link link-pending" data-status="pending" href="#">動画を見る</a>
+        </li>
+        <li class="material-card fade-in">
+          <h3>よくある質問</h3>
+          <a class="material-link" href="#faq">サイト内で見る</a>
+        </li>
+      </ul>
+      <!-- 編集ここまで -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション10：講師紹介
+       ============================================================ -->
+  <section class="section" id="instructor" aria-labelledby="instructor-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="instructor-heading">講師紹介</h2>
+
+      <div class="instructor-card fade-in">
+        <div class="instructor-photo">
+          <!-- 写真がない場合はイニシャル「MW」が自動表示されます。images/profile/wada-michihiro.jpg に差し替えてください -->
+          <img src="images/profile/wada-michihiro.jpg" alt="講師 和田倫周の写真" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="photo-fallback" aria-hidden="true">MW</div>
+        </div>
+
+        <div class="instructor-body">
+          <h3 class="instructor-name">和田 倫周<span class="instructor-kana">（わだ みちひろ）</span></h3>
+
+          <ul class="instructor-roles">
+            <li>鹿児島県立高等学校 国語科教諭</li>
+            <li>Google for Education 認定トレーナー</li>
+            <li>Google認定教育者 Level 1・Level 2</li>
+            <li>Gemini認定教育者</li>
+            <li>Canva Teacher Canvassador</li>
+            <li>GEG Kagoshima 共同リーダー</li>
+            <li>GEG Japan Mentors 九州・沖縄</li>
+            <li>学校現場でのICT活用、生成AI活用、業務改善を実践</li>
+            <li>Google Workspace、Gemini、NotebookLM、Canva、GASを活用した研修を実施</li>
+            <li>学校や教育委員会、研究会等でICT研修講師を担当</li>
+          </ul>
+
+          <p class="instructor-bio">
+            鹿児島県の高校教員として、国語教育、進路支援、学校図書館、ICT活用に取り組んでいます。
+            Google Workspace、Gemini、NotebookLM、Canva、Google Apps Scriptなどを活用し、授業改善と校務効率化を実践しています。
+            ICTが得意な一部の先生だけでなく、苦手意識のある先生も「これなら使える」と感じられる研修を大切にしています。
+            研修では、機能の説明に終始せず、学校現場で明日から使える方法を、実演と演習を通して紹介します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション11：著作紹介
+       ============================================================ -->
+  <section class="section section-alt" id="publications" aria-labelledby="publications-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="publications-heading">著作・執筆</h2>
+
+      <!-- 編集ここから：著作を追加する場合は li.book-card を複製してください -->
+      <ul class="book-grid">
+        <li class="book-card fade-in">
+          <div class="book-cover">
+            <!-- 書影は images/books/ 配下に保存し、下のsrcを差し替えてください -->
+            <img src="images/books/book-01.jpg" alt="書影（後日差し替え）" loading="lazy" onerror="this.closest('.book-cover').classList.add('cover-missing')">
+          </div>
+          <div class="book-info">
+            <span class="book-type">単著・共著・執筆等</span>
+            <h3 class="book-title">後日入力</h3>
+            <p class="book-meta">著者名：後日入力</p>
+            <p class="book-meta">出版社：後日入力</p>
+            <p class="book-meta">発行年：後日入力</p>
+            <p class="book-desc">ここに著作の概要を掲載します。</p>
+            <a class="material-link link-pending" data-status="pending" href="#">詳細・購入ページ</a>
+          </div>
+        </li>
+      </ul>
+      <!-- 編集ここまで -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション12：よくある質問
+       ============================================================ -->
+  <section class="section" id="faq" aria-labelledby="faq-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="faq-heading">よくある質問</h2>
+
+      <div class="accordion" data-accordion>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. 音声ファイルはどの形式で保存されますか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>Surface Go 2のサウンドレコーダーでは一般的にm4aやwav形式で保存されます。使用する端末やアプリによって形式が異なるため、詳しくは学校で使用している端末の仕様をご確認ください。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. Geminiに音声ファイルをアップロードできない場合はどうすればよいですか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>ファイル形式や容量、通信環境によってアップロードできない場合があります。ファイル形式の変換や、時間を分けて録音するなどの対応をご検討ください。学校の端末環境によって制限がある場合は、情報担当の先生にご確認ください。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. 個人情報を含む音声を使用してもよいですか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>個人情報や要配慮情報の取り扱いについては、必ず学校や自治体の情報セキュリティ方針に従ってください。研修用の演習では、実際の生徒名や個人情報を含む音声は使用しないようにしてください。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. AIが作った面談記録をそのまま保存してよいですか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>AIの出力は必ず人が内容を確認し、事実と異なる部分がないかを確かめてから保存してください。面談記録や生徒指導記録など重要な記録は、AIの出力だけで確定しないようにしてください。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. Googleフォームの回答はどこに保存されますか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>回答はフォームの「回答」タブに集計されるほか、Googleスプレッドシートと連携することで表形式でも保存・管理できます。保存先やアクセス権限については、学校のGoogle Workspace管理方針をご確認ください。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. PowerPointのレイアウトが崩れた場合はどうすればよいですか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>Canvaへの変換ではフォントや図形の位置がずれることがあります。変換後は全スライドを確認し、必要な箇所を手動で修正してください。元のPowerPointデータは必ず残しておくことをおすすめします。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. Canva教育版を利用するには何が必要ですか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>学校アカウントでの教育版ライセンスが必要な場合があります。利用条件や申請方法については、学校の情報担当またはCanvaの公式案内をご確認ください。</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button type="button" class="accordion-trigger" aria-expanded="false">Q. スマートフォンから研修サイトを開けますか？</button>
+          </h3>
+          <div class="accordion-panel">
+            <p>はい、スマートフォン・タブレット・Surface Go 2・PCなど、さまざまな画面幅に対応しています。研修後の復習にもスマートフォンからご利用いただけます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       セクション13：エンディング
+       ============================================================ -->
+  <section class="section ending" id="ending" aria-labelledby="ending-heading">
+    <div class="section-inner">
+      <h2 class="ending-message" id="ending-heading">
+        AIを使うことが目的ではありません。<br>
+        先生方が生徒と向き合う時間を増やすことが目的です。
+      </h2>
+
+      <div class="hero-actions fade-in">
+        <a class="btn btn-secondary" href="#voice-ai">音声AIプロンプトへ戻る</a>
+        <a class="btn btn-secondary" href="#gemini">Geminiプロンプトへ戻る</a>
+        <a class="btn btn-secondary" href="#forms">Googleフォームを復習する</a>
+        <a class="btn btn-secondary" href="#canva">Canvaを復習する</a>
+      </div>
+
+      <p class="ending-footer">
+        鹿児島県立薩摩中央高等学校 教職員ICT研修<br>
+        講師：和田 倫周（みちひろ）
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 鹿児島県立薩摩中央高等学校 教職員ICT研修</p>
+</footer>
+
+<button type="button" class="back-to-top" id="back-to-top" aria-label="ページの先頭へ戻る" hidden>
+  <span aria-hidden="true">↑</span>
+</button>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
