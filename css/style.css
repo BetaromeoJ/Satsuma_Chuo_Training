@@ -1143,7 +1143,7 @@ html.no-intro .fade-in-item {
 
 .credential-badge {
   flex: 0 0 auto;
-  height: 48px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   border-radius: 6px;
