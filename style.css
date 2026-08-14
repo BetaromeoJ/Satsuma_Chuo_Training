@@ -14,22 +14,22 @@
 :root {
   --color-bg-start: #ffffff;
   --color-bg-mid: #ffffff;
-  --color-bg-end: #eaecf5;
+  --color-bg-end: #e6f3ea;
 
   --color-ink: #14151a;          /* 濃い文字・ボタン背景 */
   --color-text: #2a2d38;         /* 本文文字 */
   --color-text-sub: #6b7280;     /* 補足文字 */
   --color-text-faint: #9aa0b4;   /* さらに薄い文字 */
 
-  --color-blue: #4a5fc1;         /* メインカラー（落ち着いたインディゴ） */
-  --color-purple: #6c56c9;       /* サブカラー（グラデーション用） */
-  --color-blue-deep: #2d3f9e;
+  --color-blue: #1f7a5c;         /* メインカラー（落ち着いたグリーン） */
+  --color-purple: #3fae7a;       /* サブカラー（グラデーション用・明るいグリーン） */
+  --color-blue-deep: #145a41;
 
-  --color-border: #e7e9f5;
-  --color-border-soft: #ececf0;
+  --color-border: #e0f0e6;
+  --color-border-soft: #e9efec;
   --color-card-bg: #ffffff;
-  --color-panel-bg: #f6f7fb;
-  --color-pill-bg: #f2f3f8;
+  --color-panel-bg: #f2f8f4;
+  --color-pill-bg: #eef7f1;
 
   --color-caution-bg: #fff8e6;
   --color-caution-border: #f3d98b;
@@ -134,7 +134,7 @@ button:focus-visible,
   margin-bottom: 1rem;
 }
 .badge.badge-solid {
-  background: #eef0fb;
+  background: #e8f6ee;
   border-color: transparent;
   color: var(--color-blue-deep);
 }
@@ -406,16 +406,16 @@ section.block + section.block {
   transition: transform .22s cubic-bezier(.34,1.56,.64,1), box-shadow .22s ease, background .2s ease;
   will-change: transform;
 }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -8px rgba(74,95,193,0.35); }
-.btn.lift { transform: translateY(-6px) scale(1.03); box-shadow: 0 16px 28px -8px rgba(74,95,193,0.4); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -8px rgba(31,122,92,0.35); }
+.btn.lift { transform: translateY(-6px) scale(1.03); box-shadow: 0 16px 28px -8px rgba(31,122,92,0.4); }
 .btn-primary { background: var(--color-ink); color: #ffffff; }
 .btn-primary:hover { background: #24242a; }
 .btn-outline {
   background: #ffffff;
   color: var(--color-blue-deep);
-  border: 1.5px solid #c9d0f5;
+  border: 1.5px solid #bfe3cc;
 }
-.btn-outline:hover { background: linear-gradient(90deg,#eef0fb 0%,#f2eefa 100%); }
+.btn-outline:hover { background: linear-gradient(90deg,#e8f6ee 0%,#eef9f2 100%); }
 .btn-sm { min-height: 40px; padding: 0.55rem 1.2rem; font-size: 0.85rem; }
 
 /* ------------------------------------------------------------
@@ -432,8 +432,8 @@ section.block + section.block {
 }
 .card-hover:hover, .card-hover:focus-visible {
   transform: translateY(-6px);
-  box-shadow: 0 20px 32px -14px rgba(74,95,193,0.28);
-  border-color: #c9d0f5;
+  box-shadow: 0 20px 32px -14px rgba(31,122,92,0.28);
+  border-color: #bfe3cc;
 }
 
 .avatar {
@@ -472,7 +472,7 @@ section.block + section.block {
 .goal-card-head .material-symbols-outlined {
   width: 44px; height: 44px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg,#eef0fb 0%,#f2eefa 100%);
+  background: linear-gradient(90deg,#e8f6ee 0%,#eef9f2 100%);
   color: var(--color-blue-deep);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
@@ -671,7 +671,7 @@ body.session-view-open { overflow: hidden; }
   padding: 0.55rem 1.15rem;
   cursor: pointer;
 }
-.session-close-btn:hover { border-color: #c9d0f5; color: var(--color-blue-deep); }
+.session-close-btn:hover { border-color: #bfe3cc; color: var(--color-blue-deep); }
 
 .session-view-body { padding: 2rem 0 5rem; }
 
@@ -699,7 +699,7 @@ body.session-view-open { overflow: hidden; }
   line-height: 1.7;
 }
 .statement-card .statement .accent {
-  background: linear-gradient(90deg, #9db0ff, #cdbcff);
+  background: linear-gradient(90deg, #8fe0b8, #b8f0cf);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -754,7 +754,7 @@ body.session-view-open { overflow: hidden; }
 .grad-pill {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(90deg, #eef0fb 0%, #f2eefa 100%);
+  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
   color: var(--color-blue-deep);
   font-size: 0.78rem;
   font-weight: 700;
@@ -780,7 +780,7 @@ body.session-view-open { overflow: hidden; }
 .achievement-pill .material-symbols-outlined { font-size: 21px; color: #7a4a00; }
 .instructor-bio { color: var(--color-text); font-size: 0.92rem; line-height: 1.85; margin-bottom: 1rem; }
 .quote-box {
-  background: linear-gradient(90deg, #eef0fb 0%, #f2eefa 100%);
+  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
   border-radius: var(--radius-sm);
   padding: 1.1rem 1.3rem;
   font-weight: 700;
@@ -844,7 +844,7 @@ body.session-view-open { overflow: hidden; }
    ヒント（前向きな提案）カード：青系
    ------------------------------------------------------------ */
 .tip-card {
-  background: linear-gradient(90deg, #eef0fb 0%, #f2eefa 100%);
+  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -958,7 +958,7 @@ body.session-view-open { overflow: hidden; }
   height: 40px;
   padding: 0 0.65rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, #eef0fb 0%, #f2eefa 100%);
+  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
   color: var(--color-blue-deep);
   font-weight: 800;
   font-size: 0.85rem;
@@ -1012,7 +1012,7 @@ body.session-view-open { overflow: hidden; }
 .tool-card .tool-icon {
   width: 46px; height: 46px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, #eef0fb 0%, #f2eefa 100%);
+  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
   color: var(--color-blue-deep);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
@@ -1038,7 +1038,7 @@ body.session-view-open { overflow: hidden; }
   color: var(--color-text);
   min-height: 40px;
 }
-.quick-jump a:hover { border-color: #c9d0f5; color: var(--color-blue-deep); }
+.quick-jump a:hover { border-color: #bfe3cc; color: var(--color-blue-deep); }
 
 /* ------------------------------------------------------------
    パンくずリスト
@@ -1252,7 +1252,7 @@ body.session-view-open { overflow: hidden; }
    基礎操作カード（動画）
    ------------------------------------------------------------ */
 .help-banner {
-  background: linear-gradient(90deg, #eef0fb 0%, #f2eefa 100%);
+  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
