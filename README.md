@@ -7,17 +7,25 @@
 デザイン・レイアウト・余白・配色・アニメーション・CSS設計・JavaScript設計はベースサイトから
 一切変更していません。変更したのは研修内容（各講座・プロンプト・復習教材・FAQ）のみです。
 
-## ファイル構成
+## ファイル構成（フラット構成）
 
 ```
 /
-├── index.html              全セクションをまとめた1ページ構成
-├── assets/
-│   ├── css/style.css       共通スタイル（配色・演出はすべてここで管理）
-│   ├── js/main.js          共通スクリプト（コピー・アコーディオン・SESSION全画面ビュー・スプラッシュ等）
-│   └── images/             講師写真・書影・バッジ画像（instructor-illustration.gif ほか、設定済み）
+├── index.html                 全セクションをまとめた1ページ構成
+├── style.css                  共通スタイル（配色・演出はすべてここで管理）
+├── main.js                    共通スクリプト（コピー・アコーディオン・SESSION全画面ビュー・スプラッシュ等）
+├── instructor-illustration.gif  講師イラスト
+├── google-trainer-badge.png   資格バッジ画像
+├── canvassador-badge.png      資格バッジ画像
+├── book-cover.png             書影画像
 └── README.md
 ```
+
+**フォルダを分けず、すべて同じ階層（リポジトリ直下）に置く構成です。** GitHubの「Add file」→
+「Create new file」でファイルを1つずつ作成する場合、ファイル名に`assets/css/style.css`のような
+パスを入力すると意図せずフォルダが作られてしまい、`index.html`から見つからずCSSが読み込まれない
+（無装飾のページになる）ことがあります。ファイル名は`style.css`・`main.js`のように、パス無しの
+単純なファイル名で作成してください。
 
 ビルド環境不要の静的HTMLです。ファイル一式をそのままアップロードするだけで動作します。
 外部依存はGoogle Fonts（M PLUS Rounded 1c／Material Symbols）のみで、CDNライブラリは使用していません。
@@ -87,7 +95,7 @@
 クリックすると、通常のスクロールではなく、その講座だけを覆う全画面ビューが開きます（他の講座が
 開いていた場合は自動的に閉じ、常に1つだけが表示されます）。入場時にはサイトの青
 （`--color-blue-deep`）の幕が下から上へ流れて消える演出が入ります。ビュー右上の「閉じる」ボタン、
-または Esc キーで元の画面に戻れます。この動作は `assets/js/main.js` の `initSessionViews()`
+または Esc キーで元の画面に戻れます。この動作は `main.js` の `initSessionViews()`
 （対象idは `SESSION_VIEW_IDS`）で制御しています。この仕組み・演出は北指宿中学校版から一切
 変更していません。
 
@@ -141,13 +149,13 @@ Googleフォーム・Canva AIの5枚のカードで構成しています。Canva
 <!-- 著作情報：ここから編集 -->　…　<!-- 著作情報：ここまで -->
 ```
 
-写真・書影は `assets/images/instructor-illustration.gif`・`google-trainer-badge.png`・
+写真・書影は `instructor-illustration.gif`・`google-trainer-badge.png`・
 `canvassador-badge.png`・`book-cover.png` に設定済みです（差し替える場合は同名で上書き）。
 画像が読み込めない場合もアイコン表示でレイアウトは崩れません。
 
 ## 配色の変更方法
 
-`assets/css/style.css`先頭の`:root { ... }`ブロックの値だけを書き換えれば、サイト全体の色が
+`style.css`先頭の`:root { ... }`ブロックの値だけを書き換えれば、サイト全体の色が
 変わります（北指宿中学校版と同じ変数構成です）。
 
 ## 公開前の確認事項
