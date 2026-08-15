@@ -77,11 +77,11 @@
 | SESSION 3 全画面ビュー | `#session3-view` | Googleフォーム、こんなに簡単に作れる（回答体験→Gemini→Brisk→自宅復習・25分） |
 | SESSION 4 全画面ビュー | `#session4-view` | PowerPointを、もっと便利に（Canva AI×スピーカーノート×プレゼンリモコン・15分） |
 | SESSION 5 全画面ビュー | `#session5-view` | プロンプトは、学校の資産（まとめ・資産化のメッセージ・5分） |
+| ツールの使い分け | `#tools` | Gemini／Gemini Notebook／Googleフォーム／Canva／Brisk／ChatGPT／Claude／Copilot |
 | 使い方ガイド | `#guides` | Surface Go 2・Gemini Notebook・Brisk・Googleフォーム・Canva AIの5つのガイドカード |
 | 研修後に復習する | `#after` | クイックリンク・FAQ・参考リンク |
 | プロンプトライブラリ | `#prompts` | 音声／授業／校務／Googleフォーム／Canvaの5カテゴリー |
 | AI活用ロードマップ | `#roadmap` | STEP01〜07 |
-| ツールの使い分け | `#tools` | Gemini／Gemini Notebook／Googleフォーム／Canva／Brisk／ChatGPT／Claude／Copilot |
 
 北指宿中学校版にあった「Canva Basics」（Canva公式リンク集）と「教科別活用例」（13教科カード）は、
 今回の90分研修の内容に直接対応する項目がないため掲載していません。「Canva Basics」相当の内容は
