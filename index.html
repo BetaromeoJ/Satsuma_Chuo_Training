@@ -96,9 +96,12 @@
 
       <div class="card card-hover instructor-card">
         <div class="instructor-flex">
-          <!-- 講師写真：instructor-illustration.gif を差し替えてください（画像が無くても崩れません） -->
+          <!-- 講師写真：instructor-video.mp4／instructor-video.webm（instructor-video-poster.jpgをポスター/フォールバックに使用）を差し替えてください（動画が無くても崩れません） -->
           <div class="instructor-photo">
-            <img src="instructor-illustration.gif" alt="和田倫周 プロフィールイラスト" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <video class="instructor-video" poster="instructor-video-poster.jpg" autoplay muted loop playsinline disablepictureinpicture aria-label="和田倫周 プロフィール動画" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <source src="instructor-video.webm" type="video/webm">
+              <source src="instructor-video.mp4" type="video/mp4">
+            </video>
             <span class="material-symbols-outlined avatar-fallback-icon" aria-hidden="true">person</span>
           </div>
           <div>

@@ -14,7 +14,8 @@
 ├── index.html                 全セクションをまとめた1ページ構成
 ├── style.css                  共通スタイル（配色・演出はすべてここで管理）
 ├── main.js                    共通スクリプト（コピー・アコーディオン・SESSION全画面ビュー・スプラッシュ等）
-├── instructor-illustration.gif  講師イラスト
+├── instructor-video.mp4        講師プロフィール動画（ループ再生・音声なし）
+├── instructor-video-poster.jpg 講師動画のポスター画像（読み込み中・再生不可時のフォールバック）
 ├── google-trainer-badge.png   資格バッジ画像
 ├── canvassador-badge.png      資格バッジ画像
 ├── book-cover.png             書影画像
@@ -139,7 +140,8 @@ Googleフォーム・Canva AIの5枚のカードで構成しています。Canva
 ## 講師プロフィール・著作情報について
 
 講師紹介（`#instructor`）・著作紹介（`#book`）は、北指宿中学校版の内容をそのまま流用しています
-（文章・画像・レイアウトとも変更していません）。編集箇所は以下のコメントで囲まれた範囲です。
+（文章・レイアウトとも変更していません）。講師写真は当初のイラスト画像から、動く自己紹介動画
+（`instructor-video.mp4`）に差し替えています。編集箇所は以下のコメントで囲まれた範囲です。
 
 ```html
 <!-- 講師プロフィール：ここから編集 -->　…　<!-- 講師プロフィール：ここまで -->
@@ -147,9 +149,17 @@ Googleフォーム・Canva AIの5枚のカードで構成しています。Canva
 <!-- 著作情報：ここから編集 -->　…　<!-- 著作情報：ここまで -->
 ```
 
-写真・書影は `instructor-illustration.gif`・`google-trainer-badge.png`・
-`canvassador-badge.png`・`book-cover.png` に設定済みです（差し替える場合は同名で上書き）。
-画像が読み込めない場合もアイコン表示でレイアウトは崩れません。
+講師の写真部分（`#instructor`内の`.instructor-photo`）は`<video>`要素です。
+`instructor-video.mp4`（音声なし・自動再生・ループ・6秒）を、円形の枠内に自動再生・
+ループ再生します。`instructor-video-poster.jpg`は動画の読み込み中に表示されるポスター画像です。
+動画が読み込めない場合は自動的にアイコン表示へ切り替わり、レイアウトは崩れません。
+「動きを減らす」設定（prefers-reduced-motion）が有効な環境では、自動再生をせずポスター画像の
+まま静止表示します（`main.js`の`initInstructorVideo()`）。
+
+動画を差し替える場合は、`instructor-video.mp4`と`instructor-video-poster.jpg`（動画の1コマ目
+などの静止画）を同名で上書きしてください。書影・バッジ画像は
+`google-trainer-badge.png`・`canvassador-badge.png`・`book-cover.png`に設定済みです
+（差し替える場合は同名で上書き）。画像が読み込めない場合もアイコン表示でレイアウトは崩れません。
 
 ## 配色の変更方法
 

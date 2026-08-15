@@ -267,6 +267,18 @@ function initTapLift() {
   });
 }
 
+function initInstructorVideo() {
+  const video = document.querySelector('.instructor-video');
+  if (!video) return;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    // 動きを抑えたい設定の場合は自動再生せず、ポスター画像（静止画）のまま表示する
+    video.removeAttribute('autoplay');
+    video.pause();
+    video.currentTime = 0;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initSplash();
   initMobileNav();
@@ -276,4 +288,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initSessionViews();
   initSmoothAnchors();
   initTapLift();
+  initInstructorVideo();
 });
