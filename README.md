@@ -11,14 +11,17 @@
 
 ```
 /
-├── index.html                 全セクションをまとめた1ページ構成
-├── style.css                  共通スタイル（配色・演出はすべてここで管理）
-├── main.js                    共通スクリプト（コピー・アコーディオン・SESSION全画面ビュー・スプラッシュ等）
-├── instructor-video.mp4        講師プロフィール動画（ループ再生・音声なし）
-├── instructor-video-poster.jpg 講師動画のポスター画像（読み込み中・再生不可時のフォールバック）
-├── google-trainer-badge.png   資格バッジ画像
-├── canvassador-badge.png      資格バッジ画像
-├── book-cover.png             書影画像
+├── index.html                   全セクションをまとめた1ページ構成
+├── style.css                    共通スタイル（配色・演出はすべてここで管理）
+├── main.js                      共通スクリプト（コピー・アコーディオン・SESSION全画面ビュー・スプラッシュ等）
+├── instructor-video.mp4         講師プロフィール動画（ループ再生・音声なし／Safari等向け）
+├── instructor-video.webm        講師プロフィール動画（Chrome・Firefox等向け、mp4と同内容）
+├── instructor-video-poster.jpg  講師動画のポスター画像（読み込み中・再生不可時のフォールバック）
+├── google-trainer-badge.png     資格バッジ画像
+├── canvassador-badge.png        資格バッジ画像
+├── book-cover.png               書影画像
+├── session3-quiz-qr.png         SESSION 3 STEP 1で使う校務アンケートのQRコード
+├── session3-intro-quiz-qr.png   SESSION 3冒頭のGoogleクイズのQRコード
 └── README.md
 ```
 
@@ -75,7 +78,7 @@
 | 今日の研修 | `#today` | 研修テーマ＋SESSION 1〜5のカード（数字順に表示、開くボタンで全画面表示） |
 | SESSION 1 全画面ビュー | `#session1-view` | 「話すだけ」で校務が終わる時代へ（Surface Go 2録音×Gemini・20分） |
 | SESSION 2 全画面ビュー | `#session2-view` | Gemini Notebookを先生の共同担当にする（授業案・確認問題・振り返り・20分） |
-| SESSION 3 全画面ビュー | `#session3-view` | Googleフォーム、こんなに簡単に作れる（回答体験→Gemini→Brisk→自宅復習・25分） |
+| SESSION 3 全画面ビュー | `#session3-view` | Googleフォームは「アンケート」だけじゃない（導入：Googleクイズ体験→発展：Brisk紹介→本編：回答する→集計を見る→スプレッドシート連携→仕組みを知る→自分で作る・25分） |
 | SESSION 4 全画面ビュー | `#session4-view` | PowerPointを、もっと便利に（Canva AI×スピーカーノート×プレゼンリモコン・15分） |
 | SESSION 5 全画面ビュー | `#session5-view` | プロンプトは、学校の資産（まとめ・資産化のメッセージ・5分） |
 | ツールの使い分け | `#tools` | Gemini／Gemini Notebook／Googleフォーム／Canva／Brisk／ChatGPT／Claude／Copilot |
@@ -115,12 +118,40 @@
 
 合計90分。
 
+## SESSION 3「Googleフォームは『アンケート』だけじゃない」について
+
+SESSION 3は次の順序で構成しています。
+
+1. **導入｜Googleクイズ体験**：講師が事前に作成したGoogleクイズに参加者が挑戦し、Googleフォームが
+   アンケートだけでなく「問題＋解説」で生徒が自分で復習できる教材にもなることを体験します。
+2. **発展｜Brisk紹介**：「こんなクイズ、自分で作るのは大変？」という問いかけから、Briskを使うと
+   教材からクイズを自動生成できることを紹介します。県域教育アカウントでは使えないため、研修本編の
+   演習にはせず、「自宅で試してみよう｜Brisk」という自宅・個人アカウント向けの案内にとどめています。
+3. **本編｜回答する→集計を見る→スプレッドシートとの連携を知る→仕組みを知る→自分で作る**（STEP 1〜5）：
+   講師が用意した「今、一番時間がとられていると感じる校務は？」というアンケートを使って、
+   Googleフォームの基本操作と集計の仕組みを体験し、最後に自分でも簡単な3問フォームを作ります。
+
+冒頭のGoogleクイズとSTEP 1のアンケートは**別のフォーム**です。混同を防ぐため、STEP 1の直後に
+両者が別物であることを明記したヒントカードと、よくあるトラブルへの確認事項を設けています。
+
+**導入のGoogleクイズのQRコード・リンク先の変更方法**：`index.html`内
+`<!-- QRコード：session3-intro-quiz-qr.png を差し替えてください（冒頭のGoogleクイズ用） -->`
+の直後にある`<img>`の`src`がQRコード画像（`session3-intro-quiz-qr.png`、同名で上書き可）、
+その少し下の`<a href="https://docs.google.com/forms/...">Googleクイズに挑戦する</a>`のリンク先が、
+実際に使うGoogleクイズです。研修ごとに新しいクイズを使う場合は、この2箇所（画像とリンク先）を
+差し替えてください。
+
+**STEP 1（回答する）のQRコード・リンク先**は変更していません。`session3-quiz-qr.png`と
+「今、一番時間がとられていると感じる校務は？」のフォームURLのままです。差し替え方法は
+導入のクイズと同様（画像とリンク先の2箇所）です。
+
 ## Briskについて（重要）
 
 Briskは県域教育アカウントでは利用できないため、個人のGoogleアカウントでの利用となります。
 校務で使う教材や生徒の個人情報を含む資料は、個人アカウント側にアップロードしないよう、
 SESSION 3本文・FAQ・使い方ガイドの複数箇所で注意喚起しています。文言を変更する場合も、
-この注意点は残すことを推奨します。
+この注意点は残すことを推奨します。SESSION 3では、Briskは研修本編の演習にはせず、
+「自宅で試してみよう」という自宅・個人アカウントでの利用案内にとどめています。
 
 ## 使い方ガイドについて
 

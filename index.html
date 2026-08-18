@@ -55,7 +55,7 @@
     <a href="#today"><span class="material-symbols-outlined" aria-hidden="true">today</span>今日の研修</a>
     <a href="#session1"><span class="material-symbols-outlined" aria-hidden="true">mic</span>SESSION 1 話すだけで校務が終わる</a>
     <a href="#session2"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>SESSION 2 Gemini Notebook</a>
-    <a href="#session3"><span class="material-symbols-outlined" aria-hidden="true">quiz</span>SESSION 3 Googleフォーム</a>
+    <a href="#session3"><span class="material-symbols-outlined" aria-hidden="true">quiz</span>SESSION 3 Googleフォームはアンケートだけじゃない</a>
     <a href="#session4"><span class="material-symbols-outlined" aria-hidden="true">palette</span>SESSION 4 Canva教育版</a>
     <a href="#session5"><span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>SESSION 5 プロンプトは学校の資産</a>
     <a href="#tools"><span class="material-symbols-outlined" aria-hidden="true">handyman</span>ツールの使い分け</a>
@@ -281,8 +281,8 @@
       <!-- ===== SESSION 3（クリックで全画面表示） ===== -->
       <div class="card session-card" id="session3" style="margin-bottom:1.25rem;">
         <span class="session-badge"><span class="material-symbols-outlined" aria-hidden="true">quiz</span>SESSION 3</span>
-        <h3 class="session-title">Googleフォーム、こんなに簡単に作れる</h3>
-        <p class="session-copy">回答して体験 → Geminiで作る → Briskで作る → 自宅で復習。</p>
+        <h3 class="session-title">Googleフォームは「アンケート」だけじゃない</h3>
+        <p class="session-copy">回答する → 集計を見る → 仕組みを知る → 自分で作る</p>
         <a href="#session3" class="btn btn-primary">SESSION 3を開く<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </div>
 
@@ -750,7 +750,7 @@
         </div>
 
         <div class="page-nav">
-          <a href="#session3" class="btn btn-primary">続けてSESSION 3へ：Googleフォーム、こんなに簡単に作れる<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          <a href="#session3" class="btn btn-primary">続けてSESSION 3へ：Googleフォームは「アンケート」だけじゃない<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
           <a href="#today" class="btn btn-outline">SESSION一覧に戻る</a>
         </div>
 
@@ -777,9 +777,9 @@
   </div>
 
   <!-- ===== SESSION 3 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き） ===== -->
-  <div class="session-view" id="session3-view" role="dialog" aria-modal="true" aria-label="SESSION 3 Googleフォーム、こんなに簡単に作れる">
+  <div class="session-view" id="session3-view" role="dialog" aria-modal="true" aria-label="SESSION 3 Googleフォームは「アンケート」だけじゃない">
     <div class="session-curtain">
-      <p class="session-curtain-text">SESSION 3<span class="session-curtain-sub">Googleフォーム、こんなに簡単に作れる</span></p>
+      <p class="session-curtain-text">SESSION 3<span class="session-curtain-sub">Googleフォームは「アンケート」だけじゃない</span></p>
     </div>
     <div class="session-view-header">
       <div class="wrap">
@@ -789,160 +789,293 @@
     </div>
     <div class="session-view-body">
       <div class="wrap">
-        <h2 class="session-title">Googleフォーム、こんなに簡単に作れる</h2>
-        <p class="session-copy">回答して体験する → Geminiで作る → Briskで作る → 自宅で復習する。</p>
-        <p class="session-lead">今回はフォームを一から作る講座ではありません。「こんなに簡単に作れる」を体験する講座です。まずは講師が作成したクイズに回答して集計をリアルタイムで確認し、そのあとGeminiとBriskの2通りの方法でGoogleフォームを自動生成します。</p>
+        <h2 class="session-title">Googleフォームは「アンケート」だけじゃない</h2>
+        <p class="session-copy">回答する → 集計を見る → 仕組みを知る → 自分で作る</p>
+        <p class="session-lead">Googleフォームを理解する一番の近道は、まず自分で使ってみることです。今日はまず「クイズに挑戦する」ところから始めて、そのあと「説明を聞く」のではなく、<strong>回答者 → 作成者</strong>の順番でGoogleフォームの基本を体験します。</p>
 
-        <h4 class="session-sub-title" style="margin-top:1.75rem;">この講座でできるようになること</h4>
+        <!-- ===== 導入：Googleクイズ体験 ===== -->
+        <span class="badge badge-solid">導入</span>
+        <h4 class="session-sub-title" style="margin-top:0.6rem;">まずは3問。Googleクイズに挑戦！</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">Googleフォームは、アンケートを集めるだけのツールではありません。問題を出題し、回答を確認する<strong>クイズ教材</strong>としても活用できます。今回のクイズは、正解・不正解を確認するだけでなく、回答後に「なぜそうなるのか」という<strong>解説</strong>も読めるようにしています。</p>
+
+        <div class="flow-diagram" style="margin-bottom:1.5rem;">
+          <div class="flow-step">問題を解く</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">答えを確認する</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">解説を読む</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">もう一度考える</div>
+        </div>
+
+        <p style="color:var(--color-text-sub);margin-bottom:1.5rem;">先生がその場で一問ずつ解説しなくても、生徒が自分のペースでこの流れを繰り返せます。Googleフォームは「テストする道具」だけではなく、<strong>「自分で復習できる教材」</strong>としても活用できます。</p>
+
+        <div class="grid grid-2" style="margin-bottom:1.5rem;">
+          <div class="card">
+            <h4 style="font-weight:800;margin-bottom:0.6rem;">PC・Surfaceで見ている方</h4>
+            <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:1rem;">スマホでQRコードを読み取ってください。</p>
+            <!-- QRコード：session3-intro-quiz-qr.png を差し替えてください（冒頭のGoogleクイズ用） -->
+            <img src="session3-intro-quiz-qr.png" alt="Googleクイズへのリンク（QRコード）" loading="lazy" style="width:160px;height:160px;display:block;margin:0 auto;border-radius:var(--radius-md);border:1px solid var(--color-border);">
+          </div>
+          <div class="card" style="display:flex;flex-direction:column;justify-content:center;">
+            <h4 style="font-weight:800;margin-bottom:0.6rem;">スマホ・タブレットで見ている方</h4>
+            <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:1.25rem;">下のボタンをタップして挑戦してください。</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJQmkRN-kEFlaSEKbx2jMEzEro4rzyzsNtCmaKQYE2r4tE9g/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary">Googleクイズに挑戦する<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </div>
+
+        <p style="font-size:0.82rem;color:var(--color-text-faint);margin-bottom:1.5rem;">※このクイズは、このあとSTEP 1で使うアンケートとは<strong>別のフォーム</strong>です。</p>
+
+        <h4 class="session-sub-title" style="margin-top:0;">Googleフォームなら、こんな教材も作れます</h4>
+        <div class="pill-row" style="margin-bottom:1.5rem;">
+          <span class="grad-pill">選択式の問題</span>
+          <span class="grad-pill">画像を使った問題</span>
+          <span class="grad-pill">複数選択問題</span>
+          <span class="grad-pill">正解・不正解の確認</span>
+          <span class="grad-pill">問題ごとの解説</span>
+          <span class="grad-pill">生徒自身による復習</span>
+        </div>
+
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">auto_stories</span>
+          <p>大切なのは「採点できること」より、<strong>「解説を付けられること」</strong>です。問題と解説をセットにすることで、生徒が一人でも復習できる教材をGoogleフォームで作れます。</p>
+        </div>
+
+        <!-- ===== 発展：Briskの紹介（自宅・発展扱い） ===== -->
+        <span class="badge badge-solid">発展</span>
+        <h4 class="session-sub-title" style="margin-top:0.6rem;">こんなクイズ、自分で作るのは大変？</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1.25rem;">Briskを使える環境なら、教材作成をさらに効率化できます。</p>
+
+        <div class="flow-diagram" style="margin-bottom:1.5rem;">
+          <div class="flow-step">YouTube・Webページ・教材</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">Brisk</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">クイズ生成</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">Googleフォーム</div>
+        </div>
+
+        <div class="caution-card" style="margin-bottom:1.5rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">warning</span>
+          <p>今回の研修で使用する県域教育アカウントではBriskを利用できないため、<strong>今日の演習ではBriskを使用しません。</strong></p>
+        </div>
+
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">home</span>
+          <p><strong>自宅で試してみよう｜Brisk</strong><br>今日体験したようなGoogleクイズを、もっと短時間で作りたい方へ。Briskを利用できる個人アカウント等の環境では、YouTubeやWeb教材からクイズを生成し、Googleフォームへ展開する方法もあります。研修後、自宅でぜひ試してみてください。<br><span style="font-size:0.82rem;color:var(--color-text-faint);">※利用可否はアカウントや組織の設定によって異なります。</span></p>
+        </div>
+
+        <!-- ===== 本編への区切り ===== -->
+        <div class="statement-card" style="margin-bottom:2rem;">
+          <p class="eyebrow">Session 3 本編</p>
+          <p class="statement">今日は、<span class="accent">Googleフォームの基本</span>を体験します。</p>
+        </div>
+        <p style="color:var(--color-text-sub);margin-bottom:1.75rem;">クイズのような教材も作れますが、まずはGoogleフォームの基本から。今日は講師が用意した簡単なフォームを使って、回答する→集計を見る→仕組みを知る→自分で作る、という4つのステップを体験します。</p>
+
+        <h4 class="session-sub-title">この講座でできるようになること</h4>
         <div class="card" style="margin-bottom:2rem;">
           <ul class="goal-list">
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>講師が作成したGoogleフォームクイズに回答し、リアルタイム集計を体験する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Geminiを使ってGoogleフォームの構成案・質問文を自動生成する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Brisk（個人Googleアカウント）を使って教材からGoogleフォームを自動生成する</li>
-            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>自宅でも個人アカウントを使って復習できるようになる</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Googleフォームがアンケート以外にも使えることを知る</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>回答がリアルタイムで自動集計されることを見る</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>回答がスプレッドシートに蓄積できることを知る</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>質問・選択肢・必須回答など、Googleフォームの仕組みを知る</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>自分で簡単なフォームを1つ作れるようになる</li>
           </ul>
         </div>
 
         <h4 class="session-sub-title">基本の流れ</h4>
         <div class="flow-diagram" style="margin-bottom:2rem;">
-          <div class="flow-step">①クイズに回答する</div>
+          <div class="flow-step">回答する</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">②リアルタイム集計を見る</div>
+          <div class="flow-step">集計を見る</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">③GeminiでGoogleフォームを自動生成</div>
+          <div class="flow-step">スプレッドシートとの連携を知る</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">④Briskで教材からGoogleフォームを自動生成</div>
+          <div class="flow-step">仕組みを知る</div>
           <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
-          <div class="flow-step">⑤自宅で個人アカウントを使って復習</div>
+          <div class="flow-step">自分で作る</div>
         </div>
 
-        <div class="caution-card" style="margin-bottom:2rem;">
-          <span class="material-symbols-outlined" aria-hidden="true">warning</span>
-          <ul>
-            <li>Briskは県域教育アカウントでは利用できません。個人のGoogleアカウントで利用してください。</li>
-            <li>校務で使う教材・生徒の個人情報を含む資料は、個人アカウント側にアップロードしないでください。</li>
-            <li>自宅で試す際も、学校の教材の著作権・生徒の個人情報の取り扱いに注意してください。</li>
-          </ul>
+        <!-- ===== STEP 1 回答する ===== -->
+        <span class="badge badge-solid">STEP 1</span>
+        <h4 class="session-sub-title" style="margin-top:0.6rem;">まずは、回答者になってみよう</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1.25rem;">講師が事前に作成したGoogleフォームのアンケートに、先生方自身が回答します。Surface Go 2またはスマートフォンから回答できます。ここではGoogleフォームの作り方は説明しません。まずは「回答する側から見ると、Googleフォームはこう見える」ことを体験してください。</p>
+
+        <div class="grid grid-2" style="margin-bottom:2rem;">
+          <div class="card">
+            <h4 style="font-weight:800;margin-bottom:0.6rem;">PCで見ている方</h4>
+            <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:1rem;">QRコードをスマホで読み取って回答してください。</p>
+            <!-- QRコード：session3-quiz-qr.png を差し替えてください（STEP1の校務アンケート用） -->
+            <img src="session3-quiz-qr.png" alt="校務アンケート用Googleフォームへのリンク（QRコード）" loading="lazy" style="width:160px;height:160px;display:block;margin:0 auto;border-radius:var(--radius-md);border:1px solid var(--color-border);">
+          </div>
+          <div class="card" style="display:flex;flex-direction:column;justify-content:center;">
+            <h4 style="font-weight:800;margin-bottom:0.6rem;">スマホ・タブレットで見ている方</h4>
+            <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:1.25rem;">下のボタンをタップして回答してください。</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMRd9wrrb4uXmzGYkDHDLcHlPFUYeNY2Ps_W1yx0jxTAbzPg/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary">アンケートに回答する<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+          </div>
         </div>
 
-        <h4 class="session-sub-title">演習手順</h4>
-        <ol class="step-list" style="margin-bottom:1.5rem;">
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">info</span>
+          <p>ここで回答するのは「<strong>今、一番時間がとられていると感じる校務は？</strong>」というアンケートです。冒頭のGoogleクイズとは別のフォームです。</p>
+        </div>
+
+        <!-- ===== STEP 2 集計を見る ===== -->
+        <span class="badge badge-solid">STEP 2</span>
+        <h4 class="session-sub-title" style="margin-top:0.6rem;">回答した瞬間、集計は始まっています</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1.25rem;">先生方が回答した直後に、講師がGoogleフォームの「回答」画面を提示します。回答数・自動生成されたグラフ・回答割合を、その場で確認します。</p>
+
+        <div class="flow-diagram" style="margin-bottom:1.5rem;">
+          <div class="flow-step">回答</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">自動集計</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">グラフ</div>
+        </div>
+
+        <div class="statement-card" style="margin-bottom:1.5rem;">
+          <p class="eyebrow">Message</p>
+          <p class="statement">今、誰も集計作業をしていません。<br><span class="accent">回答された瞬間から、Googleフォームが自動で集計しています。</span></p>
+        </div>
+
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+          <p>円グラフ・棒グラフ・回答割合が、リアルタイムに自動的に集計されていく様子をその場で確認できます。操作は必要ありません。授業振り返りや理解度確認、行事アンケートなど、日々の校務でも同じように使えます。</p>
+        </div>
+
+        <!-- ===== STEP 3 スプレッドシートとの連携を知る ===== -->
+        <span class="badge badge-solid">STEP 3</span>
+        <h4 class="session-sub-title" style="margin-top:0.6rem;">回答をスプレッドシートに蓄積する</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">Googleフォームの「回答」タブから「スプレッドシートにリンク」を選ぶだけで、回答データがGoogleスプレッドシートへ自動的に蓄積されていく様子を、講師が実演します。</p>
+
+        <div class="flow-diagram" style="margin-bottom:1.5rem;">
+          <div class="flow-step">回答</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">スプレッドシートにリンク</div>
+          <div class="flow-arrow"><span class="material-symbols-outlined" aria-hidden="true">arrow_downward</span></div>
+          <div class="flow-step">一覧データとして蓄積</div>
+        </div>
+
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">table_chart</span>
+          <p>ここでは詳しい操作は扱いません。「フォームとスプレッドシートがつながる」ことを知ってもらえれば十分です。</p>
+        </div>
+
+        <!-- ===== STEP 4 仕組みを知る ===== -->
+        <span class="badge badge-solid">STEP 4</span>
+        <h4 class="session-sub-title" style="margin-top:0.6rem;">STEP 1のフォームの「裏側」を見てみよう</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1rem;">先ほどSTEP 1で回答したGoogleフォームを、作成者側の編集画面から見せます。「回答者として見たフォーム」と「作成者として見たフォーム」をつなげて理解しましょう。すべての機能を説明する必要はありません。次の機能だけを簡単に確認します。</p>
+
+        <div class="pill-row" style="margin-bottom:1.5rem;">
+          <span class="grad-pill">質問を追加</span>
+          <span class="grad-pill">質問形式</span>
+          <span class="grad-pill">選択肢</span>
+          <span class="grad-pill">必須回答</span>
+          <span class="grad-pill">プレビュー</span>
+          <span class="grad-pill">回答タブ</span>
+        </div>
+
+        <div class="tip-card" style="margin-bottom:2rem;">
+          <span class="material-symbols-outlined" aria-hidden="true">celebration</span>
+          <p>全部覚える必要はありません。まずは「質問を作る → 回答してもらう → 集計を見る」これだけで十分です。</p>
+        </div>
+
+        <!-- ===== STEP 5 自分で作る ===== -->
+        <span class="badge badge-solid">STEP 5</span>
+        <h4 class="session-sub-title" style="margin-top:0.6rem;">3問だけ、自分で作ってみよう</h4>
+        <p style="color:var(--color-text-sub);margin-bottom:1.25rem;">ここでは先生方自身がGoogleフォームを作成します。複雑なフォームは作りません。テーマは「<strong>明日、学校で使えそうな3問フォーム</strong>」。タイトル＋3問で完成とします。</p>
+
+        <div class="pill-row" style="margin-bottom:1.5rem;">
+          <span class="grad-pill">授業振り返り</span>
+          <span class="grad-pill">理解度確認</span>
+          <span class="grad-pill">小テスト</span>
+          <span class="grad-pill">進路希望調査</span>
+          <span class="grad-pill">面談希望</span>
+          <span class="grad-pill">行事アンケート</span>
+          <span class="grad-pill">職員アンケート</span>
+          <span class="grad-pill">研修アンケート</span>
+          <span class="grad-pill">出欠確認</span>
+          <span class="grad-pill">簡単な確認問題</span>
+        </div>
+
+        <ol class="step-list" style="margin-bottom:2rem;">
           <li class="step-item">
             <div class="step-num">1</div>
-            <div class="step-body"><h4>講師作成のGoogleフォームクイズに回答する</h4><p>配布されたURL・QRコードからクイズに回答します。</p></div>
+            <div class="step-body"><h4>Googleフォームを開く</h4><p>forms.google.comまたはGoogleアプリ一覧から開きます。</p></div>
           </li>
           <li class="step-item">
             <div class="step-num">2</div>
-            <div class="step-body"><h4>リアルタイム集計を確認する</h4><p>「回答」タブでグラフ表示される集計をその場で確認します。</p></div>
+            <div class="step-body"><h4>「空白のフォーム」を選ぶ</h4><p>テンプレートは使わず、白紙から始めます。</p></div>
           </li>
           <li class="step-item">
             <div class="step-num">3</div>
-            <div class="step-body"><h4>Geminiでフォームの構成案を作る</h4><p>下のプロンプトをコピーし、Geminiに教材やテーマを伝えて質問文の構成案を作ってもらいます。</p></div>
+            <div class="step-body"><h4>タイトルを入力する</h4><p>フォームの名前をつけます（例：〇〇講座 振り返り）。</p></div>
           </li>
           <li class="step-item">
             <div class="step-num">4</div>
-            <div class="step-body"><h4>Googleフォームに反映する、またはBriskで自動生成する</h4><p>Geminiの構成案をGoogleフォームに入力するか、個人アカウントでBriskを使い教材から直接フォームを自動生成します。</p></div>
+            <div class="step-body"><h4>質問を3つ作る</h4><p>選択式でも記述式でもかまいません。</p></div>
           </li>
           <li class="step-item">
             <div class="step-num">5</div>
-            <div class="step-body"><h4>自宅で個人アカウントを使って復習する</h4><p>校内では県域アカウントのみのため、Briskは自宅等で個人アカウントを使って復習してください。手順は下の「操作ガイド」にまとめています。</p></div>
+            <div class="step-body"><h4>プレビューして自分で回答する</h4><p>右上のプレビュー（目のアイコン）から確認します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">6</div>
+            <div class="step-body"><h4>「回答」タブから結果を見る</h4><p>自分の回答が集計されているか確認します。</p></div>
           </li>
         </ol>
 
-        <h4 class="session-sub-title">コピー用プロンプト</h4>
-        <div class="prompt-card">
-          <div class="prompt-card-head">
-            <div>
-              <h4>プロンプト1：小テストの構成案を作る</h4>
-              <p class="prompt-scene">教材の内容から、Googleフォームで使う小テストの構成案を作る。</p>
-            </div>
-            <button type="button" class="copy-btn" data-copy-target="#promptS3-1">
-              <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
-              <span class="copy-label">コピー</span>
-            </button>
+        <h4 class="session-sub-title">よくあるトラブル</h4>
+        <div class="accordion" style="margin-bottom:1rem;">
+          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS3-0">
+            <span>冒頭のGoogleクイズと、STEP 1のアンケートは同じフォームですか？</span>
+            <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="accordion-panel" id="accS3-0">
+            <p>いいえ、別のフォームです。冒頭のGoogleクイズは「Googleフォームを教材として使う体験」、STEP 1の「今、一番時間がとられていると感じる校務は？」は「Googleフォームの基本と集計を学ぶための演習」です。</p>
           </div>
-          <div class="prompt-body" id="promptS3-1">添付（または下記）の教材の内容から、
-Googleフォームで出題する小テストの構成案を作成してください。
-
-条件:
-・問題数は【5〜10】問
-・選択式と記述式を混ぜる
-・難易度を「基礎」「応用」に分ける
-・各問題に正答と簡単な解説をつける
-
-対象は【学年・科目】の生徒です。</div>
         </div>
-
-        <div class="prompt-card">
-          <div class="prompt-card-head">
-            <div>
-              <h4>プロンプト2：確認クイズの質問文を作る</h4>
-              <p class="prompt-scene">授業のまとめとして使う、短い確認クイズの質問文を作る。</p>
-            </div>
-            <button type="button" class="copy-btn" data-copy-target="#promptS3-2">
-              <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
-              <span class="copy-label">コピー</span>
-            </button>
-          </div>
-          <div class="prompt-body" id="promptS3-2">この授業内容の理解度を確認するための
-選択式クイズを5問作成してください。
-
-・各問題に4つの選択肢をつける
-・正解は1つだけにする
-・生徒がひっかかりやすい紛らわしい選択肢を混ぜる
-・解説を1〜2文で添える</div>
-        </div>
-
-        <h4 class="session-sub-title">実践例</h4>
-        <div class="example-card" style="margin-bottom:2rem;">
-          <h4>定期試験前の確認テストを2通りの方法で作り比べる</h4>
-          <p>同じ授業プリントを使い、Geminiで質問文の構成案を作ってGoogleフォームに手動入力する方法と、個人アカウントでBriskを使い教材から直接自動生成する方法を試し、所要時間と仕上がりを比較しました。</p>
-        </div>
-
-        <h4 class="session-sub-title">操作ガイド（自宅で復習する場合）</h4>
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS3-1">
-            <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">extension</span>Chromeへの追加方法（Brisk）</span>
-            <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+            <span>QRコードがうまく読み取れない</span>
+            <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
           </button>
           <div class="accordion-panel" id="accS3-1">
-            <p>個人のGoogleアカウントでChromeにログインした状態で、<a href="https://www.briskteaching.com" target="_blank" rel="noopener" style="color:var(--color-blue-deep);font-weight:700;">Brisk Teaching公式サイト</a>またはChromeウェブストアで「Brisk Teaching」を検索し、「Chromeに追加」をクリックします。</p>
+            <p>周囲が暗い、画面が反射している場合はうまく読み取れないことがあります。画面の明るさを上げる、またはスマホ・タブレットの方はボタンを直接お使いください。</p>
           </div>
         </div>
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS3-2">
-            <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">settings</span>Brisk設定方法</span>
-            <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
+            <span>Googleフォームが開けない</span>
+            <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
           </button>
           <div class="accordion-panel" id="accS3-2">
-            <p>追加後、ツールバーのパズルアイコンからBriskをピン留めします。アイコンをクリックし、作りたい教材（クイズ・スライド等）の種類を選んで、教材のURLやテキストを渡します。</p>
+            <p>県域教育アカウントでログインしているかご確認ください。改善しない場合は、情報担当・管理職にご相談ください。</p>
           </div>
         </div>
         <div class="accordion" style="margin-bottom:1rem;">
           <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS3-3">
-            <span class="trigger-label"><span class="material-symbols-outlined" aria-hidden="true">fact_check</span>Googleフォーム自動生成の手順</span>
-            <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
-          </button>
-          <div class="accordion-panel" id="accS3-3">
-            <p>Briskの「クイズを作成」機能を選び、教材（PDF・Webページ・テキスト）を指定すると、Googleフォーム形式のクイズが自動生成されます。生成後は必ず内容を確認してから配布してください。</p>
-          </div>
-        </div>
-
-        <h4 class="session-sub-title">よくあるトラブル</h4>
-        <div class="accordion" style="margin-bottom:1rem;">
-          <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accS3-4">
-            <span>Briskが表示されない・動作しない</span>
+            <span>Briskが表示されない・動作しない（自宅で試す場合）</span>
             <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
           </button>
-          <div class="accordion-panel" id="accS3-4">
+          <div class="accordion-panel" id="accS3-3">
             <p>個人のGoogleアカウントでログインしているかご確認ください。県域教育アカウントでは利用できません。改善しない場合は拡張機能を一度削除し、再度追加をお試しください。</p>
           </div>
         </div>
+
+        <div class="statement-card" style="margin-bottom:2rem;">
+          <p class="eyebrow">Message</p>
+          <p class="statement">まず自分で使って、仕組みを知る。<br><span class="accent">その上でAIを使えば、もっと簡単になる。</span></p>
+        </div>
+
+        <p style="color:var(--color-text-sub);margin-bottom:2rem;">Googleフォームの操作を覚えることだけが目的ではありません。大切なのは、<strong>「何を聞くのか」「何を確かめたいのか」「集めた回答をどう授業に生かすのか」</strong>を先生が考えることです。</p>
 
         <div class="page-nav">
           <a href="#session4" class="btn btn-primary">続けてSESSION 4へ：PowerPointを、もっと便利に<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
           <a href="#today" class="btn btn-outline">SESSION一覧に戻る</a>
         </div>
+
 
         <footer class="site-footer">
           <p class="foot-title">薩摩中央高等学校 ICT研修ポータル</p>
@@ -965,6 +1098,7 @@ Googleフォームで出題する小テストの構成案を作成してくだ�
       </div>
     </div>
   </div>
+
 
   <!-- ===== SESSION 4 全画面ビュー（メニュー・ボタンのリンクから開く／幕の演出付き） ===== -->
   <div class="session-view" id="session4-view" role="dialog" aria-modal="true" aria-label="SESSION 4 PowerPointを、もっと便利に">
@@ -1150,7 +1284,7 @@ Googleフォームで出題する小テストの構成案を作成してくだ�
           <a href="#prompts"><span class="material-symbols-outlined" aria-hidden="true">content_copy</span>プロンプトライブラリ</a>
           <a href="#after"><span class="material-symbols-outlined" aria-hidden="true">help</span>よくある質問（FAQ）</a>
           <a href="#tools"><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>Gemini Notebookの使い分け</a>
-          <a href="#session3"><span class="material-symbols-outlined" aria-hidden="true">quiz</span>Googleフォームの作り方</a>
+          <a href="#session3"><span class="material-symbols-outlined" aria-hidden="true">quiz</span>Googleクイズ体験・フォーム基本</a>
           <a href="#guides"><span class="material-symbols-outlined" aria-hidden="true">extension</span>Briskの使い方</a>
           <a href="#session4"><span class="material-symbols-outlined" aria-hidden="true">palette</span>Canva AIの使い方</a>
         </div>
@@ -1320,7 +1454,7 @@ Googleフォームで出題する小テストの構成案を作成してくだ�
           <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 2を見直す</p>
         </a>
         <a href="#session3" class="card card-hover">
-          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">Googleフォームの作り方</h4>
+          <h4 style="font-size:0.98rem;font-weight:800;margin-bottom:0.4rem;">Googleフォームは「アンケート」だけじゃない</h4>
           <p style="font-size:0.85rem;color:var(--color-text-sub);">SESSION 3を見直す</p>
         </a>
         <a href="#session4" class="card card-hover">
@@ -1379,7 +1513,7 @@ Googleフォームで出題する小テストの構成案を作成してくだ�
           <span class="material-symbols-outlined expand-icon" aria-hidden="true">expand_more</span>
         </button>
         <div class="accordion-panel" id="faq4">
-          <p>いいえ。Geminiだけでも質問文の構成案を作り、Googleフォームに手動で反映できます。より短時間で自動生成したい場合に、個人アカウントでBriskを使うと便利です。詳しくは<a href="#session3" style="color:var(--color-blue-deep);font-weight:700;">SESSION 3</a>をご確認ください。</p>
+          <p>いいえ。SESSION 3では、まず自分の手でGoogleフォームを作れるようになったあと、発展としてBriskを紹介します（自宅・個人アカウントでの利用が前提です）。Geminiだけでも質問文の構成案を作り、Googleフォームに手動で反映できます。詳しくは<a href="#session3" style="color:var(--color-blue-deep);font-weight:700;">SESSION 3</a>と<a href="#prompts" style="color:var(--color-blue-deep);font-weight:700;">プロンプトライブラリ</a>をご確認ください。</p>
         </div>
       </div>
       <div class="accordion">
