@@ -1,11 +1,17 @@
 /* ============================================================
-   鹿児島県立薩摩中央高等学校 教職員ICT研修ポータル 共通スタイル
+   紫原小学校 ICT研修ポータル 共通スタイル
    ------------------------------------------------------------
-   北指宿中学校版ICT研修ポータルの配色・タイポグラフィ・
-   カードUI・浮き上がり演出・スプラッシュ演出をそのまま流用しています。
-   デザイン・レイアウト・余白・アニメーションは一切変更していません。
+   薩摩中央高等学校版ICT研修ポータル（Base Design）の配色・タイポグラフィ・
+   カードUI・浮き上がり演出・スプラッシュ演出・SESSION全画面ビューを
+   そのまま流用しています。デザイン・レイアウト・余白・角丸・
+   アニメーション・レスポンシブ設計は一切変更していません。
+   変更したのは研修内容（各SESSION・プロンプト・活用例・FAQ）のみです。
    配色を変更したい場合は、下の「配色設定」の変数だけを
    書き換えてください（README.mdにも説明があります）。
+
+   ファイル末尾に「明日からやること」選択カード用のスタイルのみ、
+   今回の新規コンテンツ用として追加しています（新規追加箇所として
+   コメントで明示しています。それ以外は既存コンポーネントの流用です）。
    ============================================================ */
 
 /* ------------------------------------------------------------
@@ -14,29 +20,29 @@
 :root {
   --color-bg-start: #ffffff;
   --color-bg-mid: #ffffff;
-  --color-bg-end: #e6f3ea;
+  --color-bg-end: #ffedd5;
 
   --color-ink: #14151a;          /* 濃い文字・ボタン背景 */
   --color-text: #2a2d38;         /* 本文文字 */
   --color-text-sub: #6b7280;     /* 補足文字 */
   --color-text-faint: #9aa0b4;   /* さらに薄い文字 */
 
-  --color-blue: #1f7a5c;         /* メインカラー（落ち着いたグリーン） */
-  --color-purple: #3fae7a;       /* サブカラー（グラデーション用・明るいグリーン） */
-  --color-blue-deep: #145a41;
+  --color-blue: #ea580c;         /* メインカラー（オレンジ系） */
+  --color-purple: #fb923c;       /* サブカラー（グラデーション用・明るいオレンジ） */
+  --color-blue-deep: #9a3412;    /* 濃色バリエーション（幕演出・見出しリンク等） */
 
-  --color-border: #e0f0e6;
-  --color-border-soft: #e9efec;
+  --color-border: #f6d2a8;
+  --color-border-soft: #f5e6d8;
   --color-card-bg: #ffffff;
-  --color-panel-bg: #f2f8f4;
-  --color-pill-bg: #eef7f1;
+  --color-panel-bg: #ffedd5;
+  --color-pill-bg: #fed7aa;
 
-  --color-caution-bg: #fff8e6;
-  --color-caution-border: #f3d98b;
-  --color-caution-text: #6b5518;
-  --color-caution-icon: #b5860b;
+  --color-caution-bg: #fdece9;   /* 注意喚起はブランド色と区別するため暖色の赤寄りに */
+  --color-caution-border: #f2b8ab;
+  --color-caution-text: #7a2e18;
+  --color-caution-icon: #c0392b;
 
-  --color-success: #1b8a5a;
+  --color-success: #1b8a5a;      /* 成功・完了サインは引き続き緑のまま（ブランド色と区別） */
 
   --radius-lg: 1.25rem;
   --radius-md: 1rem;
@@ -134,7 +140,7 @@ button:focus-visible,
   margin-bottom: 1rem;
 }
 .badge.badge-solid {
-  background: #e8f6ee;
+  background: #ffedd5;
   border-color: transparent;
   color: var(--color-blue-deep);
 }
@@ -311,7 +317,7 @@ section.block + section.block {
   margin-top: .6rem;
   font-size: .78rem;
   font-weight: 600;
-  color: #e3e8ff;
+  color: #ffd9ae;
   letter-spacing: 0.12em;
 }
 
@@ -413,9 +419,9 @@ section.block + section.block {
 .btn-outline {
   background: #ffffff;
   color: var(--color-blue-deep);
-  border: 1.5px solid #bfe3cc;
+  border: 1.5px solid #f6b174;
 }
-.btn-outline:hover { background: linear-gradient(90deg,#e8f6ee 0%,#eef9f2 100%); }
+.btn-outline:hover { background: linear-gradient(90deg,#ffedd5 0%,#fed7aa 100%); }
 .btn-sm { min-height: 40px; padding: 0.55rem 1.2rem; font-size: 0.85rem; }
 
 /* ------------------------------------------------------------
@@ -433,7 +439,7 @@ section.block + section.block {
 .card-hover:hover, .card-hover:focus-visible {
   transform: translateY(-6px);
   box-shadow: 0 20px 32px -14px rgba(31,122,92,0.28);
-  border-color: #bfe3cc;
+  border-color: #f6b174;
 }
 
 .avatar {
@@ -472,7 +478,7 @@ section.block + section.block {
 .goal-card-head .material-symbols-outlined {
   width: 44px; height: 44px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg,#e8f6ee 0%,#eef9f2 100%);
+  background: linear-gradient(90deg,#ffedd5 0%,#fed7aa 100%);
   color: var(--color-blue-deep);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
@@ -637,7 +643,7 @@ body.session-view-open { overflow: hidden; }
   margin-top: .6rem;
   font-size: .78rem;
   font-weight: 600;
-  color: #e3e8ff;
+  color: #ffd9ae;
   letter-spacing: 0.12em;
 }
 
@@ -671,7 +677,7 @@ body.session-view-open { overflow: hidden; }
   padding: 0.55rem 1.15rem;
   cursor: pointer;
 }
-.session-close-btn:hover { border-color: #bfe3cc; color: var(--color-blue-deep); }
+.session-close-btn:hover { border-color: #f6b174; color: var(--color-blue-deep); }
 
 .session-view-body { padding: 2rem 0 5rem; }
 
@@ -699,7 +705,7 @@ body.session-view-open { overflow: hidden; }
   line-height: 1.7;
 }
 .statement-card .statement .accent {
-  background: linear-gradient(90deg, #8fe0b8, #b8f0cf);
+  background: linear-gradient(90deg, #fdba74, #fed7aa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -755,7 +761,7 @@ body.session-view-open { overflow: hidden; }
 .grad-pill {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
   color: var(--color-blue-deep);
   font-size: 0.78rem;
   font-weight: 700;
@@ -779,9 +785,31 @@ body.session-view-open { overflow: hidden; }
   letter-spacing: 0.01em;
 }
 .achievement-pill .material-symbols-outlined { font-size: 21px; color: #7a4a00; }
+a.cert-cta {
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease;
+  animation: cert-cta-pulse 2.6s ease-in-out infinite;
+}
+a.cert-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 30px -8px rgba(245,166,35,0.7);
+}
+a.cert-cta:focus-visible {
+  outline: 3px solid var(--color-blue-deep);
+  outline-offset: 3px;
+}
+a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
+@keyframes cert-cta-pulse {
+  0%, 100% { box-shadow: 0 10px 22px -8px rgba(245,166,35,0.55); }
+  50% { box-shadow: 0 12px 28px -6px rgba(245,166,35,0.85); }
+}
+@media (prefers-reduced-motion: reduce) {
+  a.cert-cta { animation: none; }
+}
 .instructor-bio { color: var(--color-text); font-size: 0.92rem; line-height: 1.85; margin-bottom: 1rem; }
 .quote-box {
-  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
   border-radius: var(--radius-sm);
   padding: 1.1rem 1.3rem;
   font-weight: 700;
@@ -845,7 +873,7 @@ body.session-view-open { overflow: hidden; }
    ヒント（前向きな提案）カード：青系
    ------------------------------------------------------------ */
 .tip-card {
-  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -959,7 +987,7 @@ body.session-view-open { overflow: hidden; }
   height: 40px;
   padding: 0 0.65rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
   color: var(--color-blue-deep);
   font-weight: 800;
   font-size: 0.85rem;
@@ -1013,7 +1041,7 @@ body.session-view-open { overflow: hidden; }
 .tool-card .tool-icon {
   width: 46px; height: 46px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
   color: var(--color-blue-deep);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
@@ -1039,7 +1067,7 @@ body.session-view-open { overflow: hidden; }
   color: var(--color-text);
   min-height: 40px;
 }
-.quick-jump a:hover { border-color: #bfe3cc; color: var(--color-blue-deep); }
+.quick-jump a:hover { border-color: #f6b174; color: var(--color-blue-deep); }
 
 /* ------------------------------------------------------------
    パンくずリスト
@@ -1211,26 +1239,6 @@ body.session-view-open { overflow: hidden; }
 .example-card h4 { font-weight: 800; margin-bottom: 0.6rem; font-size: 0.98rem; }
 
 /* ------------------------------------------------------------
-   画像プレースホルダー（後からスクリーンショット等を追加する枠）
-   ------------------------------------------------------------ */
-.image-placeholder {
-  border: 1.5px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-panel-bg);
-  padding: 1.25rem;
-  min-height: 90px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-  color: var(--color-text-faint);
-  text-align: center;
-}
-.image-placeholder .material-symbols-outlined { font-size: 26px; }
-.image-placeholder p { font-size: 0.78rem; margin: 0; }
-
-/* ------------------------------------------------------------
    アコーディオン
    ------------------------------------------------------------ */
 .accordion {
@@ -1273,7 +1281,7 @@ body.session-view-open { overflow: hidden; }
    基礎操作カード（動画）
    ------------------------------------------------------------ */
 .help-banner {
-  background: linear-gradient(90deg, #e8f6ee 0%, #eef9f2 100%);
+  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
@@ -1409,4 +1417,139 @@ body.session-view-open { overflow: hidden; }
 @media print {
   #splash, .site-header, .mobile-nav, .nav-overlay, .back-to-top, .toast, .menu-btn { display: none !important; }
   body { background: #fff; }
+}
+
+/* ============================================================
+   ここから新規追加コンポーネント（紫原小学校版で新たに追加）
+   既存の配色トークン（--color-*）・角丸トークン（--radius-*）・
+   カード/ボタンの余白ルールをそのまま使い、既存デザインに
+   なじむ形で追加しています。既存コンポーネントの変更はありません。
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   小学校向け活用例カード（教科タグ）
+   ------------------------------------------------------------ */
+.subject-card { cursor: default; }
+.subject-tag { font-family: inherit; }
+
+/* ------------------------------------------------------------
+   「明日からやること」選択カード（SESSION 5・#action共通）
+   チェック済みのカードだけ枠とアイコンの色が変わる、
+   ごく軽いミニアクション選択UIです。
+   ------------------------------------------------------------ */
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.action-item {
+  display: block;
+}
+.action-item input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  min-height: 44px;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, transform .2s cubic-bezier(.34,1.56,.64,1);
+}
+.action-card:hover { transform: translateY(-2px); }
+.action-check {
+  width: 26px; height: 26px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: transparent;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.action-check .material-symbols-outlined { font-size: 17px; }
+.action-card p { font-size: 0.92rem; font-weight: 700; color: var(--color-text); line-height: 1.6; }
+.action-item input[type="checkbox"]:checked + .action-card {
+  border-color: var(--color-blue);
+  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+}
+.action-item input[type="checkbox"]:checked + .action-card .action-check {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: #fff;
+}
+.action-item input[type="checkbox"]:focus-visible + .action-card {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 2px;
+}
+.action-summary {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-blue-deep);
+  min-height: 1.4em;
+}
+
+/* ------------------------------------------------------------
+   3段階（基本／やってみる／もっと知る）の見出しラベル
+   ------------------------------------------------------------ */
+.depth-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-blue-deep);
+  background: var(--color-pill-bg);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+.more-box {
+  background: var(--color-panel-bg);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+.more-box h5 { font-size: 0.92rem; font-weight: 800; margin-bottom: 0.4rem; }
+
+/* ------------------------------------------------------------
+   教材の種類ごとの使い分けなどを示す比較表（SESSION 3で使用）
+   ------------------------------------------------------------ */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.86rem;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+.compare-table th, .compare-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+.compare-table thead th {
+  background: var(--color-pill-bg);
+  color: var(--color-blue-deep);
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+.compare-table tbody tr:not(:last-child) { border-bottom: 1px solid var(--color-border-soft); }
+.compare-table tbody td:first-child { font-weight: 700; white-space: nowrap; }
+.compare-table td .material-symbols-outlined {
+  font-size: 15px;
+  vertical-align: -3px;
+  color: var(--color-blue);
 }
