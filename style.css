@@ -20,29 +20,29 @@
 :root {
   --color-bg-start: #ffffff;
   --color-bg-mid: #ffffff;
-  --color-bg-end: #ffedd5;
+  --color-bg-end: #dcfce7;
 
   --color-ink: #14151a;          /* 濃い文字・ボタン背景 */
   --color-text: #2a2d38;         /* 本文文字 */
   --color-text-sub: #6b7280;     /* 補足文字 */
   --color-text-faint: #9aa0b4;   /* さらに薄い文字 */
 
-  --color-blue: #ea580c;         /* メインカラー（オレンジ系） */
-  --color-purple: #fb923c;       /* サブカラー（グラデーション用・明るいオレンジ） */
-  --color-blue-deep: #9a3412;    /* 濃色バリエーション（幕演出・見出しリンク等） */
+  --color-blue: #16a34a;         /* メインカラー（グリーン系） */
+  --color-purple: #4ade80;       /* サブカラー（グラデーション用・明るいグリーン） */
+  --color-blue-deep: #166534;    /* 濃色バリエーション（幕演出・見出しリンク等） */
 
-  --color-border: #f6d2a8;
-  --color-border-soft: #f5e6d8;
+  --color-border: #bbf7d0;
+  --color-border-soft: #dcfce7;
   --color-card-bg: #ffffff;
-  --color-panel-bg: #ffedd5;
-  --color-pill-bg: #fed7aa;
+  --color-panel-bg: #dcfce7;
+  --color-pill-bg: #86efac;
 
   --color-caution-bg: #fdece9;   /* 注意喚起はブランド色と区別するため暖色の赤寄りに */
   --color-caution-border: #f2b8ab;
   --color-caution-text: #7a2e18;
   --color-caution-icon: #c0392b;
 
-  --color-success: #1b8a5a;      /* 成功・完了サインは引き続き緑のまま（ブランド色と区別） */
+  --color-success: #2563eb;      /* 成功・完了サインは青に変更（グリーン化したブランド色と区別するため） */
 
   --radius-lg: 1.25rem;
   --radius-md: 1rem;
@@ -140,7 +140,7 @@ button:focus-visible,
   margin-bottom: 1rem;
 }
 .badge.badge-solid {
-  background: #ffedd5;
+  background: #dcfce7;
   border-color: transparent;
   color: var(--color-blue-deep);
 }
@@ -317,7 +317,7 @@ section.block + section.block {
   margin-top: .6rem;
   font-size: .78rem;
   font-weight: 600;
-  color: #ffd9ae;
+  color: #bbf7d0;
   letter-spacing: 0.12em;
 }
 
@@ -419,9 +419,9 @@ section.block + section.block {
 .btn-outline {
   background: #ffffff;
   color: var(--color-blue-deep);
-  border: 1.5px solid #f6b174;
+  border: 1.5px solid #4ade80;
 }
-.btn-outline:hover { background: linear-gradient(90deg,#ffedd5 0%,#fed7aa 100%); }
+.btn-outline:hover { background: linear-gradient(90deg,#dcfce7 0%,#86efac 100%); }
 .btn-sm { min-height: 40px; padding: 0.55rem 1.2rem; font-size: 0.85rem; }
 
 /* ------------------------------------------------------------
@@ -439,7 +439,7 @@ section.block + section.block {
 .card-hover:hover, .card-hover:focus-visible {
   transform: translateY(-6px);
   box-shadow: 0 20px 32px -14px rgba(31,122,92,0.28);
-  border-color: #f6b174;
+  border-color: #4ade80;
 }
 
 .avatar {
@@ -478,7 +478,7 @@ section.block + section.block {
 .goal-card-head .material-symbols-outlined {
   width: 44px; height: 44px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg,#ffedd5 0%,#fed7aa 100%);
+  background: linear-gradient(90deg,#dcfce7 0%,#86efac 100%);
   color: var(--color-blue-deep);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
@@ -643,7 +643,7 @@ body.session-view-open { overflow: hidden; }
   margin-top: .6rem;
   font-size: .78rem;
   font-weight: 600;
-  color: #ffd9ae;
+  color: #bbf7d0;
   letter-spacing: 0.12em;
 }
 
@@ -677,7 +677,7 @@ body.session-view-open { overflow: hidden; }
   padding: 0.55rem 1.15rem;
   cursor: pointer;
 }
-.session-close-btn:hover { border-color: #f6b174; color: var(--color-blue-deep); }
+.session-close-btn:hover { border-color: #4ade80; color: var(--color-blue-deep); }
 
 .session-view-body { padding: 2rem 0 5rem; }
 
@@ -705,7 +705,7 @@ body.session-view-open { overflow: hidden; }
   line-height: 1.7;
 }
 .statement-card .statement .accent {
-  background: linear-gradient(90deg, #fdba74, #fed7aa);
+  background: linear-gradient(90deg, #22c55e, #86efac);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -761,7 +761,7 @@ body.session-view-open { overflow: hidden; }
 .grad-pill {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+  background: linear-gradient(90deg, #dcfce7 0%, #86efac 100%);
   color: var(--color-blue-deep);
   font-size: 0.78rem;
   font-weight: 700;
@@ -809,7 +809,7 @@ a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
 }
 .instructor-bio { color: var(--color-text); font-size: 0.92rem; line-height: 1.85; margin-bottom: 1rem; }
 .quote-box {
-  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+  background: linear-gradient(90deg, #dcfce7 0%, #86efac 100%);
   border-radius: var(--radius-sm);
   padding: 1.1rem 1.3rem;
   font-weight: 700;
@@ -873,7 +873,7 @@ a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
    ヒント（前向きな提案）カード：青系
    ------------------------------------------------------------ */
 .tip-card {
-  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+  background: linear-gradient(90deg, #dcfce7 0%, #86efac 100%);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -987,7 +987,7 @@ a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
   height: 40px;
   padding: 0 0.65rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+  background: linear-gradient(90deg, #dcfce7 0%, #86efac 100%);
   color: var(--color-blue-deep);
   font-weight: 800;
   font-size: 0.85rem;
@@ -1041,7 +1041,7 @@ a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
 .tool-card .tool-icon {
   width: 46px; height: 46px;
   border-radius: var(--radius-full);
-  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+  background: linear-gradient(90deg, #dcfce7 0%, #86efac 100%);
   color: var(--color-blue-deep);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
@@ -1067,7 +1067,7 @@ a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
   color: var(--color-text);
   min-height: 40px;
 }
-.quick-jump a:hover { border-color: #f6b174; color: var(--color-blue-deep); }
+.quick-jump a:hover { border-color: #4ade80; color: var(--color-blue-deep); }
 
 /* ------------------------------------------------------------
    パンくずリスト
@@ -1281,7 +1281,7 @@ a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
    基礎操作カード（動画）
    ------------------------------------------------------------ */
 .help-banner {
-  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+  background: linear-gradient(90deg, #dcfce7 0%, #86efac 100%);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   display: flex;
@@ -1477,7 +1477,7 @@ a.cert-cta .material-symbols-outlined:last-child { font-size: 18px; }
 .action-card p { font-size: 0.92rem; font-weight: 700; color: var(--color-text); line-height: 1.6; }
 .action-item input[type="checkbox"]:checked + .action-card {
   border-color: var(--color-blue);
-  background: linear-gradient(90deg, #ffedd5 0%, #fed7aa 100%);
+  background: linear-gradient(90deg, #dcfce7 0%, #86efac 100%);
 }
 .action-item input[type="checkbox"]:checked + .action-card .action-check {
   background: var(--color-blue);
